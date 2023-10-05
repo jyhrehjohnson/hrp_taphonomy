@@ -1,0 +1,812 @@
+"id","uberon_id","fossil","anatomical_region","side","dental","completeness","preserved_part"
+3,"UBERON:7500059","A.L. 125-11","cranial","L",TRUE,"complete",NA
+4,"UBERON:7500058","A.L. 125-11","cranial","L",TRUE,"complete",NA
+5,"UBERON:0002397","A.L. 125-11","cranial","L",TRUE,"nearly complete",NA
+2,"UBERON:8490028","A.L. 125-11","cranial","L",TRUE,"complete",NA
+37,"UBERON:8490035","A.L. 198-1","cranial","L",TRUE,"complete",NA
+9,"UBERON:0001684","A.L. 128-23","cranial","R",TRUE,"nearly complete",NA
+38,"UBERON:8490034","A.L. 198-1","cranial","L",TRUE,"complete",NA
+12,"UBERON:7500054","A.L. 128-23","cranial","R",TRUE,"complete",NA
+13,"UBERON:7500053","A.L. 128-23","cranial","R",TRUE,"complete",NA
+21,"UBERON:0001684","A.L. 145-35","cranial","L",TRUE,"nearly complete",NA
+8,"UBERON:8490014","A.L. 128-23","cranial","R",TRUE,"complete",NA
+10,"UBERON:8490010","A.L. 128-23","cranial","R",TRUE,"complete",NA
+24,"UBERON:7500054","A.L. 145-35","cranial","L",TRUE,"complete",NA
+25,"UBERON:7500053","A.L. 145-35","cranial","L",TRUE,"complete",NA
+31,"UBERON:0001684","A.L. 188-1","cranial","R",TRUE,"nearly complete",NA
+23,"UBERON:8490035","A.L. 145-35","cranial","L",TRUE,"complete",NA
+7,"UBERON:8490013","A.L. 128-23","cranial","R",TRUE,"complete",NA
+32,"UBERON:8490009","A.L. 188-1","cranial","R",TRUE,"complete",NA
+35,"UBERON:0001684","A.L. 198-1","cranial","L",TRUE,"nearly complete",NA
+33,"UBERON:8490008","A.L. 188-1","cranial","R",TRUE,"nearly complete",NA
+22,"UBERON:8490036","A.L. 145-35","cranial","L",TRUE,"complete",NA
+39,"UBERON:7500054","A.L. 198-1","cranial","L",TRUE,"complete",NA
+40,"UBERON:7500053","A.L. 198-1","cranial","L",TRUE,"complete",NA
+44,"UBERON:8490036","A.L. 198-22","cranial","L",TRUE,"nearly complete",NA
+45,"UBERON:8490035","A.L. 198-22","cranial","L",TRUE,"nearly complete",NA
+34,"UBERON:8490039","A.L. 198-1","cranial","L",TRUE,"complete",NA
+36,"UBERON:8490036","A.L. 198-1","cranial","L",TRUE,"complete",NA
+11,"UBERON:8490009","A.L. 128-23","cranial","R",TRUE,"complete",NA
+46,"UBERON:0001684","A.L. 198-22","cranial","L",TRUE,"nearly complete",NA
+84,"UBERON:0001684","A.L. 228-2","cranial","L",TRUE,"nearly complete",NA
+48,"UBERON:0002397","A.L. 199-1","cranial","R",TRUE,"nearly complete",NA
+85,"UBERON:8490036","A.L. 228-2","cranial","L",TRUE,"complete",NA
+86,"UBERON:7500053","A.L. 228-2","cranial","L",TRUE,"complete",NA
+72,"UBERON:0001684","A.L. 207-13","cranial","L",TRUE,"nearly complete",NA
+58,"UBERON:8490007","A.L. 200-1a","cranial","R",TRUE,"complete",NA
+74,"UBERON:7500054","A.L. 207-13","cranial","L",TRUE,"complete",NA
+75,"UBERON:7500053","A.L. 207-13","cranial","L",TRUE,"complete",NA
+81,"UBERON:8490034","A.L. 225-8","cranial","L",TRUE,"complete",NA
+47,"UBERON:8490005","A.L. 199-1","cranial","R",TRUE,"complete",NA
+49,"UBERON:8490002","A.L. 199-1","cranial","R",TRUE,"complete",NA
+50,"UBERON:8490001","A.L. 199-1","cranial","R",TRUE,"complete",NA
+82,"UBERON:0001684","A.L. 225-8","cranial","L",TRUE,"nearly complete",NA
+6939,"UBERON:0001684","A.L. 333w-27","cranial","L",TRUE,"fragment",NA
+79,"UBERON:8490036","A.L. 225-8","cranial","L",TRUE,"complete",NA
+80,"UBERON:8490035","A.L. 225-8","cranial","L",TRUE,"complete",NA
+73,"UBERON:8490035","A.L. 207-13","cranial","L",TRUE,"complete",NA
+54,"UBERON:8490031","A.L. 200-1a","cranial","L",TRUE,"complete",NA
+55,"UBERON:8490005","A.L. 200-1a","cranial","R",TRUE,"complete",NA
+56,"UBERON:8490033","A.L. 200-1a","cranial","L",TRUE,"complete",NA
+57,"UBERON:8490032","A.L. 200-1a","cranial","L",TRUE,"complete",NA
+51,"UBERON:8490000","A.L. 199-1","cranial","R",TRUE,"complete",NA
+91,"UBERON:0001684","A.L. 266-1","cranial","BOTH",TRUE,"nearly complete",NA
+96,"UBERON:7500054","A.L. 266-1","cranial","L",TRUE,"complete",NA
+97,"UBERON:7500053","A.L. 266-1","cranial","L",TRUE,"complete",NA
+98,"UBERON:7500054","A.L. 266-1","cranial","R",TRUE,"complete",NA
+99,"UBERON:7500053","A.L. 266-1","cranial","R",TRUE,"complete",NA
+93,"UBERON:8490010","A.L. 266-1","cranial","R",TRUE,"complete",NA
+101,"UBERON:0001684","A.L. 277-1","cranial","L",TRUE,"nearly complete",NA
+94,"UBERON:8490009","A.L. 266-1","cranial","R",TRUE,"complete",NA
+95,"UBERON:8490008","A.L. 266-1","cranial","R",TRUE,"complete",NA
+104,"UBERON:7500054","A.L. 277-1","cranial","L",TRUE,"complete",NA
+105,"UBERON:7500053","A.L. 277-1","cranial","L",TRUE,"complete",NA
+106,"UBERON:0004288","A.L. 288-1",NA,"BOTH",NA,"nearly complete",NA
+100,"UBERON:8490039","A.L. 277-1","cranial","L",TRUE,"complete",NA
+102,"UBERON:8490036","A.L. 277-1","cranial","L",TRUE,"complete",NA
+103,"UBERON:8490035","A.L. 277-1","cranial","L",TRUE,"complete",NA
+92,"UBERON:8490036","A.L. 266-1","cranial","L",TRUE,"complete",NA
+165,"UBERON:0001684","A.L. 288-1i","cranial","BOTH",TRUE,"complete",NA
+170,"UBERON:7500054","A.L. 288-1i","cranial","L",TRUE,"complete",NA
+171,"UBERON:7500054","A.L. 288-1i","cranial","R",TRUE,"complete",NA
+172,"UBERON:7500053","A.L. 288-1i","cranial","R",TRUE,"complete",NA
+193,"UBERON:7500054","A.L. 311-1","cranial","L",TRUE,"complete",NA
+192,"UBERON:0001684","A.L. 311-1","cranial","L",TRUE,"fragment",NA
+195,"UBERON:7500054","A.L. 315-22","cranial","R",TRUE,"complete",NA
+196,"UBERON:0001684","A.L. 315-22","cranial","R",TRUE,"nearly complete",NA
+194,"UBERON:8490010","A.L. 315-22","cranial","R",TRUE,"complete",NA
+166,"UBERON:8490034","A.L. 288-1i","cranial","L",TRUE,"complete",NA
+167,"UBERON:8490010","A.L. 288-1i","cranial","R",TRUE,"complete",NA
+168,"UBERON:8490009","A.L. 288-1i","cranial","R",TRUE,"complete",NA
+169,"UBERON:8490008","A.L. 288-1i","cranial","R",TRUE,"complete",NA
+231,NA,"A.L. 333-115",NA,NA,NA,NA,NA
+219,"UBERON:8490017","A.L. 333-105","cranial","R",TRUE,"complete",NA
+206,"UBERON:7500053","A.L. 330-7","cranial","R",TRUE,"complete",NA
+207,"UBERON:0001684","A.L. 330-7","cranial","R",TRUE,"nearly complete",NA
+220,"UBERON:8490016","A.L. 333-105","cranial","R",TRUE,"complete",NA
+209,"UBERON:7500059","A.L. 333-1","cranial","L",TRUE,"complete",NA
+210,"UBERON:7500059","A.L. 333-1","cranial","R",TRUE,"complete",NA
+211,"UBERON:7500058","A.L. 333-1","cranial","R",TRUE,"complete",NA
+218,"UBERON:0003128","A.L. 333-105","cranial","BOTH",TRUE,"nearly complete",NA
+202,"UBERON:7500053","A.L. 330-5","cranial","R",TRUE,"complete",NA
+203,"UBERON:0001684","A.L. 330-5","cranial","BOTH",TRUE,"complete",NA
+208,"UBERON:8490031","A.L. 333-1","cranial","L",TRUE,"complete",NA
+205,"UBERON:8490010","A.L. 330-7","cranial","R",TRUE,"complete",NA
+198,"UBERON:8490039","A.L. 330-5","cranial","L",TRUE,"nearly complete",NA
+199,"UBERON:8490010","A.L. 330-5","cranial","R",TRUE,"complete",NA
+200,"UBERON:8490009","A.L. 330-5","cranial","R",TRUE,"complete",NA
+201,"UBERON:8490008","A.L. 330-5","cranial","R",TRUE,"complete",NA
+287,"UBERON:7500059","A.L. 333-2","cranial","L",TRUE,"complete",NA
+288,"UBERON:7500058","A.L. 333-2","cranial","L",TRUE,"complete",NA
+289,"UBERON:7500059","A.L. 333-2","cranial","R",TRUE,"complete",NA
+290,"UBERON:7500058","A.L. 333-2","cranial","R",TRUE,"complete",NA
+284,"UBERON:8490031","A.L. 333-2","cranial","L",TRUE,"complete",NA
+285,"UBERON:8490005","A.L. 333-2","cranial","R",TRUE,"complete",NA
+286,"UBERON:8490032","A.L. 333-2","cranial","L",TRUE,"complete",NA
+316,"UBERON:0001684","A.L. 333-43a","cranial","L",TRUE,"nearly complete",NA
+319,"UBERON:0001684","A.L. 333-43b","cranial","R",TRUE,"nearly complete",NA
+320,"UBERON:0001684","A.L. 333-43b","cranial","R",TRUE,"nearly complete",NA
+317,"UBERON:8490048","A.L. 333-43a","cranial","L",TRUE,"complete",NA
+318,"UBERON:8490047","A.L. 333-43a","cranial","L",TRUE,"complete",NA
+321,"UBERON:8490022","A.L. 333-43b","cranial","R",TRUE,"complete",NA
+322,"UBERON:8490021","A.L. 333-43b","cranial","R",TRUE,"complete",NA
+370,"UBERON:0002397","A.L. 333-86","cranial","BOTH",TRUE,"complete",NA
+371,"UBERON:8490028","A.L. 333-86","cranial","L",TRUE,"complete",NA
+372,"UBERON:8490027","A.L. 333-86","cranial","L",TRUE,"complete",NA
+373,"UBERON:8490026","A.L. 333-86","cranial","L",TRUE,"complete",NA
+374,"UBERON:8490002","A.L. 333-86","cranial","R",TRUE,"complete",NA
+375,"UBERON:8490001","A.L. 333-86","cranial","R",TRUE,"complete",NA
+390,"UBERON:0018600","A.L. 333n-1","cranial","R",TRUE,"complete",NA
+391,"UBERON:0001684","A.L. 333n-1","cranial","R",TRUE,"complete",NA
+395,"UBERON:0001684","A.L. 333w-12","cranial","R",TRUE,"nearly complete",NA
+355,"UBERON:8490036","A.L. 333-74","cranial","L",TRUE,"complete",NA
+402,"UBERON:0001684","A.L. 333w-1a","cranial","L",TRUE,"nearly complete",NA
+401,"UBERON:0002228","A.L. 333w-19","axial","UNK",FALSE,"fragment",NA
+396,"UBERON:8490010","A.L. 333w-12","cranial","R",TRUE,"nearly complete",NA
+356,"UBERON:8490035","A.L. 333-74","cranial","L",TRUE,"complete",NA
+357,"UBERON:8490034","A.L. 333-74","cranial","L",TRUE,"complete",NA
+405,"UBERON:0018580","A.L. 333w-1a","cranial","L",TRUE,"complete",NA
+406,"UBERON:7500053","A.L. 333w-1a","cranial","L",TRUE,"complete",NA
+407,"UBERON:0001684","A.L. 333w-1b","cranial","R",TRUE,"nearly complete",NA
+410,"UBERON:7500053","A.L. 333w-1b","cranial","R",TRUE,"complete",NA
+428,"UBERON:0001684","A.L. 333w-32/60","cranial","BOTH",TRUE,"nearly complete",NA
+433,"UBERON:7500054","A.L. 333w-32/60","cranial","L",TRUE,"complete",NA
+434,"UBERON:7500053","A.L. 333w-32/60","cranial","L",TRUE,"complete",NA
+447,"UBERON:0002228","A.L. 333w-44","axial","UNK",FALSE,"fragment",NA
+449,"UBERON:0001684","A.L. 333w-46","cranial","R",TRUE,"nearly complete",NA
+429,"UBERON:8490036","A.L. 333w-32/60","cranial","L",TRUE,"complete",NA
+430,"UBERON:8490035","A.L. 333w-32/60","cranial","L",TRUE,"complete",NA
+431,"UBERON:8490034","A.L. 333w-32/60","cranial","L",TRUE,"complete",NA
+432,"UBERON:8490008","A.L. 333w-32/60","cranial","R",TRUE,"complete",NA
+408,"UBERON:8490010","A.L. 333w-1b","cranial","R",TRUE,"complete",NA
+409,"UBERON:8490009","A.L. 333w-1b","cranial","R",TRUE,"complete",NA
+403,"UBERON:8490036","A.L. 333w-1a","cranial","L",TRUE,"complete",NA
+404,"UBERON:8490035","A.L. 333w-1a","cranial","L",TRUE,"complete",NA
+467,"UBERON:7500054","A.L. 333w-58","cranial","L",TRUE,"complete",NA
+450,"UBERON:7500054","A.L. 333w-46","cranial","R",TRUE,"complete",NA
+461,"UBERON:8490035","A.L. 333w-57","cranial","L",TRUE,"complete",NA
+462,"UBERON:8490034","A.L. 333w-57","cranial","L",TRUE,"complete",NA
+463,"UBERON:8490013","A.L. 333w-58","cranial","R",TRUE,"complete",NA
+464,"UBERON:8490041","A.L. 333w-58","cranial","L",TRUE,"complete",NA
+465,"UBERON:8490040","A.L. 333w-58","cranial","L",TRUE,"complete",NA
+466,"UBERON:8490015","A.L. 333w-58","cranial","R",TRUE,"complete",NA
+468,"UBERON:8490035","A.L. 333w-59","cranial","L",TRUE,"complete",NA
+469,"UBERON:8490034","A.L. 333w-59","cranial","L",TRUE,"complete",NA
+521,"UBERON:8490035","A.L. 417-1a","cranial","L",TRUE,"complete",NA
+522,"UBERON:8490034","A.L. 417-1a","cranial","L",TRUE,"complete",NA
+526,"UBERON:8490009","A.L. 417-1b","cranial","R",TRUE,"complete",NA
+515,"UBERON:0001684","A.L. 411-1","cranial","R",TRUE,"nearly complete",NA
+527,"UBERON:8490008","A.L. 417-1b","cranial","R",TRUE,"complete",NA
+530,"UBERON:8490031","A.L. 417-1d","cranial","L",TRUE,"complete",NA
+531,"UBERON:8490005","A.L. 417-1d","cranial","R",TRUE,"complete",NA
+532,"UBERON:8490006","A.L. 417-1d","cranial","R",TRUE,"complete",NA
+533,"UBERON:8490028","A.L. 417-1d","cranial","L",TRUE,"complete",NA
+534,"UBERON:8490027","A.L. 417-1d","cranial","L",TRUE,"complete",NA
+523,"UBERON:7500054","A.L. 417-1a","cranial","L",TRUE,"complete",NA
+524,"UBERON:7500053","A.L. 417-1a","cranial","L",TRUE,"complete",NA
+525,"UBERON:0001684","A.L. 417-1a","cranial","L",TRUE,"nearly complete",NA
+528,"UBERON:0001684","A.L. 417-1b","cranial","R",TRUE,"nearly complete",NA
+498,"UBERON:8490039","A.L. 400-1a","cranial","L",TRUE,"complete",NA
+499,"UBERON:8490013","A.L. 400-1a","cranial","R",TRUE,"complete",NA
+500,"UBERON:8490041","A.L. 400-1a","cranial","L",TRUE,"complete",NA
+516,"UBERON:8490010","A.L. 411-1","cranial","R",TRUE,"complete",NA
+517,"UBERON:8490008","A.L. 411-1","cranial","R",TRUE,"complete",NA
+519,"UBERON:8490039","A.L. 417-1a","cranial","L",TRUE,"complete",NA
+520,"UBERON:8490036","A.L. 417-1a","cranial","L",TRUE,"complete",NA
+544,"UBERON:8490027","A.L. 418-1","cranial","L",TRUE,"complete",NA
+546,"UBERON:8490002","A.L. 423-1","cranial","R",TRUE,"complete",NA
+549,"UBERON:8490026","A.L. 427-1a","cranial","L",TRUE,"complete",NA
+545,"UBERON:0001684","A.L. 418-1","cranial","L",TRUE,NA,NA
+553,"UBERON:8490009","A.L. 432-1","cranial","R",TRUE,"complete",NA
+547,"UBERON:7500058","A.L. 423-1","cranial","R",TRUE,"complete",NA
+548,"UBERON:0002397","A.L. 423-1","cranial","R",TRUE,"nearly complete",NA
+554,"UBERON:8490008","A.L. 432-1","cranial","R",TRUE,"complete",NA
+550,"UBERON:0002397","A.L. 427-1a","cranial","BOTH",TRUE,"complete",NA
+560,"UBERON:8490009","A.L. 436-1","cranial","R",TRUE,"complete",NA
+561,"UBERON:8490008","A.L. 436-1","cranial","R",TRUE,"complete",NA
+555,"UBERON:0001684","A.L. 432-1","cranial","R",TRUE,"nearly complete",NA
+556,"UBERON:7500053","A.L. 433-1a","cranial","R",TRUE,"complete",NA
+557,"UBERON:0001684","A.L. 433-1a","cranial","R",TRUE,"nearly complete",NA
+568,"UBERON:8490039","A.L. 437-2a","cranial","L",TRUE,"complete",NA
+569,"UBERON:8490041","A.L. 437-2a","cranial","L",TRUE,"complete",NA
+562,"UBERON:0001684","A.L. 436-1","cranial","R",TRUE,"nearly complete",NA
+566,"UBERON:7500053","A.L. 437-1","cranial","L",TRUE,"complete",NA
+567,"UBERON:0001684","A.L. 437-1","cranial","L",TRUE,"nearly complete",NA
+563,"UBERON:8490036","A.L. 437-1","cranial","L",TRUE,"complete",NA
+564,"UBERON:8490035","A.L. 437-1","cranial","L",TRUE,"complete",NA
+535,"UBERON:8490026","A.L. 417-1d","cranial","L",TRUE,"complete",NA
+536,"UBERON:8490002","A.L. 417-1d","cranial","R",TRUE,"complete",NA
+565,"UBERON:8490034","A.L. 437-1","cranial","L",TRUE,"complete",NA
+575,"UBERON:0001684","A.L. 437-2a","cranial","BOTH",TRUE,"nearly complete",NA
+602,"UBERON:0001684","A.L. 440-1","cranial","BOTH",TRUE,"nearly complete",NA
+607,"UBERON:7500054","A.L. 440-1","cranial","R",TRUE,"complete",NA
+609,"UBERON:7500053","A.L. 440-1","cranial","L",TRUE,"complete",NA
+611,"UBERON:0002397","A.L. 442-1","cranial","R",TRUE,"complete",NA
+603,"UBERON:8490041","A.L. 440-1","cranial","L",TRUE,"complete",NA
+604,"UBERON:8490036","A.L. 440-1","cranial","L",TRUE,"complete",NA
+605,"UBERON:8490035","A.L. 440-1","cranial","L",TRUE,"complete",NA
+606,"UBERON:8490013","A.L. 440-1","cranial","R",TRUE,"complete",NA
+608,"UBERON:8490039","A.L. 440-1","cranial","L",TRUE,"complete",NA
+570,"UBERON:8490040","A.L. 437-2a","cranial","L",TRUE,"complete",NA
+571,"UBERON:8490015","A.L. 437-2a","cranial","R",TRUE,"complete",NA
+572,"UBERON:8490014","A.L. 437-2a","cranial","R",TRUE,"complete",NA
+573,"UBERON:8490009","A.L. 437-2a","cranial","R",TRUE,"complete",NA
+574,"UBERON:8490008","A.L. 437-2a","cranial","R",TRUE,"complete",NA
+649,"UBERON:0001676","A.L. 444-2f","cranial",NA,FALSE,"nearly complete",NA
+614,"UBERON:7500053","A.L. 443-1","cranial","L",TRUE,"complete",NA
+615,"UBERON:0001684","A.L. 443-1","cranial","L",TRUE,"nearly complete",NA
+650,"UBERON:0001678","A.L. 444-2f","cranial","L",FALSE,"nearly complete",NA
+642,"UBERON:0001684","A.L. 444-2b","cranial","R",TRUE,"nearly complete",NA
+651,"UBERON:0001678","A.L. 444-2f","cranial","R",FALSE,"nearly complete",NA
+644,"UBERON:7500053","A.L. 444-2b","cranial","R",TRUE,"complete",NA
+645,"UBERON:0001098","A.L. 444-2b","cranial","UNK",TRUE,"fragment",NA
+627,"UBERON:0002397","A.L. 444-2a","cranial","BOTH",TRUE,"complete",NA
+612,"UBERON:8490001","A.L. 442-1","cranial","R",TRUE,"complete",NA
+653,"UBERON:7500073","A.L. 444-2h","cranial","L",FALSE,"complete",NA
+625,"UBERON:0003129","A.L. 444-2","cranial","UNK",NA,NA,NA
+641,"UBERON:8490013","A.L. 444-2b","cranial","R",TRUE,"complete",NA
+643,"UBERON:8490010","A.L. 444-2b","cranial","R",TRUE,"complete",NA
+628,"UBERON:8490031","A.L. 444-2a","cranial","L",TRUE,"complete",NA
+629,"UBERON:8490005","A.L. 444-2a","cranial","R",TRUE,"complete",NA
+630,"UBERON:8490033","A.L. 444-2a","cranial","L",TRUE,"complete",NA
+631,"UBERON:8490007","A.L. 444-2a","cranial","R",TRUE,"complete",NA
+632,"UBERON:8490028","A.L. 444-2a","cranial","L",TRUE,"complete",NA
+613,"UBERON:8490035","A.L. 443-1","cranial","L",TRUE,"complete",NA
+674,"UBERON:7500059","A.L. 486-1","cranial","L",TRUE,"complete",NA
+675,"UBERON:7500058","A.L. 486-1","cranial","L",TRUE,"complete",NA
+676,"UBERON:0002397","A.L. 486-1","cranial","L",TRUE,"nearly complete",NA
+669,"UBERON:8490033","A.L. 486-1","cranial","L",TRUE,"complete",NA
+678,"UBERON:0001684","A.L. 487-1a","cranial","R",TRUE,"nearly complete",NA
+670,"UBERON:8490032","A.L. 486-1","cranial","L",TRUE,"complete",NA
+681,"UBERON:0002397","A.L. 487-1c","cranial","L",TRUE,"nearly complete",NA
+682,"UBERON:7500059","A.L. 487-1d","cranial","R",TRUE,"complete",NA
+683,"UBERON:7500058","A.L. 487-1d","cranial","R",TRUE,"complete",NA
+684,"UBERON:0002397","A.L. 487-1d","cranial","R",TRUE,"nearly complete",NA
+692,"UBERON:0018568","A.L. 582-1","cranial","UNK",TRUE,"complete",NA
+671,"UBERON:8490028","A.L. 486-1","cranial","L",TRUE,"complete",NA
+667,"UBERON:0018576","A.L. 466-1","cranial","UNK",TRUE,"nearly complete",NA
+668,"UBERON:0018577","A.L. 466-1","cranial","UNK",TRUE,"nearly complete",NA
+654,"UBERON:7500074","A.L. 444-2h","cranial","R",FALSE,"complete",NA
+693,"UBERON:8490036","A.L. 582-1","cranial","L",TRUE,"complete",NA
+680,"UBERON:8490031","A.L. 487-1c","cranial","L",TRUE,"complete",NA
+677,"UBERON:8490008","A.L. 487-1a","cranial","R",TRUE,"complete",NA
+672,"UBERON:8490027","A.L. 486-1","cranial","L",TRUE,"complete",NA
+673,"UBERON:8490026","A.L. 486-1","cranial","L",TRUE,"complete",NA
+694,"UBERON:7500053","A.L. 582-1","cranial","L",TRUE,"complete",NA
+696,"UBERON:7500054","A.L. 582-1","cranial","R",NA,"nearly complete",NA
+697,"UBERON:7500053","A.L. 582-1","cranial","R",NA,"nearly complete",NA
+698,"UBERON:0001684","A.L. 582-1","cranial","BOTH",TRUE,"nearly complete",NA
+700,"UBERON:0001684","A.L. 620-1","cranial","L",TRUE,"nearly complete",NA
+705,"UBERON:7500059","A.L. 651-1","cranial","L",TRUE,"complete",NA
+706,"UBERON:7500058","A.L. 651-1","cranial","L",TRUE,"complete",NA
+707,"UBERON:0002397","A.L. 651-1","cranial","L",TRUE,"nearly complete",NA
+702,"UBERON:8490036","A.L. 651-1","cranial","L",TRUE,"complete",NA
+703,"UBERON:8490035","A.L. 651-1","cranial","L",TRUE,"complete",NA
+704,"UBERON:8490034","A.L. 651-1","cranial","L",TRUE,"complete",NA
+713,"UBERON:0002397","A.L. 666-1","cranial","BOTH",TRUE,"complete",NA
+701,"UBERON:8490034","A.L. 620-1","cranial","L",TRUE,"complete",NA
+695,"UBERON:8490010","A.L. 582-1","cranial","R",TRUE,"nearly complete",NA
+717,"UBERON:7500059","A.L. 666-1","cranial","L",TRUE,"complete",NA
+718,"UBERON:7500058","A.L. 666-1","cranial","L",NA,"complete",NA
+710,"UBERON:8490031","A.L. 666-1","cranial","L",TRUE,"complete",NA
+711,"UBERON:8490005","A.L. 666-1","cranial","R",TRUE,"complete",NA
+712,"UBERON:8490032","A.L. 666-1","cranial","L",TRUE,"complete",NA
+714,"UBERON:8490028","A.L. 666-1","cranial","L",TRUE,"complete",NA
+715,"UBERON:8490027","A.L. 666-1","cranial","L",TRUE,"complete",NA
+716,"UBERON:8490002","A.L. 666-1","cranial","R",TRUE,"complete",NA
+755,"UBERON:7500053","A.L. 996-1","cranial","L",TRUE,"complete",NA
+756,"UBERON:0001684","A.L. 996-1","cranial","L",TRUE,"nearly complete",NA
+754,"UBERON:8490036","A.L. 996-1","cranial","L",TRUE,"complete",NA
+737,"UBERON:8490031","A.L. 992-1","cranial","L",TRUE,"nearly complete",NA
+1,"UBERON:0007120","A.L. 1017-1","cranial","UNK",TRUE,"nearly complete","nan"
+14,"UBERON:0000981","A.L. 129-1a","appendicular","R",FALSE,"fragment","Distal, Epiphysis, Metaphysis"
+6898,"nan","A.L. 1256-1","cranial","UNK",TRUE,"complete","nan"
+6895,"UBERON:0001684","A.L. 1045-1","cranial","UNK",TRUE,NA,"nan"
+6897,"UBERON:0001684","A.L. 1180-1","cranial","UNK",TRUE,NA,"nan"
+6894,"UBERON:0002234","A.L. 1044-1","appendicular","UNK",FALSE,"complete","nan"
+6896,"nan","A.L. 1117-1","cranial","UNK",TRUE,"complete","nan"
+30,"UBERON:0007120","A.L. 176-35","cranial","L",TRUE,NA,"nan"
+18,"UBERON:0013749","A.L. 137-48a","appendicular","R",FALSE,"fragment","Distal, Epiphysis, Metaphysis"
+42,"UBERON:8490032","A.L. 198-17b","cranial","L",TRUE,"complete","Maxillary, Upper, LI2"
+27,"UBERON:8490026","A.L. 161-40","cranial","L",TRUE,"complete","Maxillary, Upper, LM3"
+71,"UBERON:8490010","A.L. 200-1b","cranial","R",TRUE,"complete","Mandibular, Lower, RM1"
+123,"UBERON:0000981","A.L. 288-1ap","appendicular","L",FALSE,"complete","nan"
+76,"UBERON:8490008","A.L. 207-17","cranial","R",TRUE,NA,"nan"
+78,"UBERON:0001676","A.L. 224-9","cranial","BOTH",FALSE,NA,"nan"
+107,"UBERON:0001676","A.L. 288-1a","cranial","UNK",FALSE,"fragment","nan"
+6899,"nan","A.L. 223-1","appendicular","UNK",FALSE,NA,"nan"
+6900,"UBERON:0000976","A.L. 223-23","appendicular","L",FALSE,"fragment","Distal"
+88,"UBERON:8490035","A.L. 241-14","cranial","L",TRUE,"complete","Mandibular, Lower"
+29,"UBERON:0001678","A.L. 166-9","cranial","L",FALSE,"fragment","nan"
+120,"UBERON:0002347","A.L. 288-1am","axial","MID",FALSE,"fragment","nan"
+121,"UBERON:0003690","A.L. 288-1an","appendicular","MID",FALSE,"complete","nan"
+109,"UBERON:0002414","A.L. 288-1ab","axial","MID",FALSE,"fragment","nan"
+108,"UBERON:0002414","A.L. 288-1aa","axial","MID",FALSE,"complete","nan"
+110,"UBERON:0004635","A.L. 288-1ac","axial","MID",FALSE,"complete","nan"
+111,"UBERON:0004634","A.L. 288-1ad","axial","MID",FALSE,"complete","nan"
+112,"UBERON:0002347","A.L. 288-1ae","axial","MID",FALSE,"complete","nan"
+113,"UBERON:0002347","A.L. 288-1af","axial","MID",FALSE,"nearly complete","nan"
+114,"UBERON:0002347","A.L. 288-1ag","axial","MID",FALSE,"nearly complete","nan"
+115,"UBERON:0002347","A.L. 288-1ah","axial","MID",FALSE,NA,"nan"
+116,"UBERON:0002347","A.L. 288-1ai","axial","MID",FALSE,"fragment","nan"
+117,"UBERON:0002347","A.L. 288-1aj","axial","MID",FALSE,NA,"nan"
+118,"UBERON:0002414","A.L. 288-1ak","axial","MID",FALSE,NA,"nan"
+119,"UBERON:0002414","A.L. 288-1al","axial","MID",FALSE,NA,"nan"
+16,"UBERON:0000981","A.L. 129-1c","appendicular","R",FALSE,"fragment","Proximal"
+26,"UBERON:0000981","A.L. 152-2","appendicular","R",FALSE,"fragment","Proximal, Epiphysis, Metaphysis"
+77,"UBERON:0000981","A.L. 211-1","appendicular","R",FALSE,"fragment","Proximal, Epiphysis, Metaphysis"
+83,"UBERON:0006862","A.L. 228-1","appendicular","R",FALSE,"complete","Diaphysis"
+15,"UBERON:0000979","A.L. 129-1b","appendicular","R",FALSE,"fragment","Proximal, Epiphysis, Metaphysis"
+20,"UBERON:0004652","A.L. 137-50","appendicular","R",FALSE,"nearly complete","Diaphysis"
+19,"UBERON:0001424","A.L. 137-48b","appendicular","R",FALSE,"nearly complete","Distal"
+17,"UBERON:0001274","A.L. 129-52","appendicular","L",FALSE,NA,"nan"
+122,"UBERON:0001272","A.L. 288-1ao","appendicular","L",FALSE,"nearly complete","nan"
+90,"UBERON:0007120","A.L. 249-27","cranial","L",TRUE,"nearly complete","nan"
+6951,"UBERON:7500054","A.L. 333w-60","cranial","L",TRUE,"complete",NA
+28,"UBERON:0004339","A.L. 162-28","cranial","BOTH",FALSE,"nearly complete","nan"
+89,"UBERON:8490014","A.L. 249-26","cranial","R",TRUE,NA,"nan"
+146,"UBERON:0010388","A.L. 288-1bl","axial","R",FALSE,"fragment","Proximal"
+162,"UBERON:0001683","A.L. 288-1d","cranial","L",FALSE,"fragment","nan"
+124,"UBERON:0000979","A.L. 288-1aq","appendicular","R",FALSE,"nearly complete","Proximal"
+163,"UBERON:0000210","A.L. 288-1e","cranial","UNK",FALSE,"fragment","nan"
+174,"UBERON:0004657","A.L. 288-1k","cranial","R",TRUE,"fragment","nan"
+161,"UBERON:0000210","A.L. 288-1c/g","cranial","UNK",FALSE,"fragment","nan"
+128,"UBERON:0002231","A.L. 288-1au","axial","R",FALSE,"fragment","Diaphysis"
+129,"UBERON:0002230","A.L. 288-1av","axial","L",FALSE,"fragment","nan"
+130,"UBERON:0002230","A.L. 288-1aw","axial","L",FALSE,"fragment","nan"
+131,"UBERON:0004601","A.L. 288-1ax","axial","R",FALSE,"fragment","nan"
+132,"UBERON:0002228","A.L. 288-1ay","axial","UNK",FALSE,"fragment","nan"
+133,"UBERON:0002228","A.L. 288-1az","axial","UNK",FALSE,"fragment","nan"
+135,"UBERON:0002231","A.L. 288-1ba","axial","R",FALSE,"fragment","Diaphysis"
+136,"UBERON:0010388","A.L. 288-1bb","axial","R",FALSE,"fragment","Proximal"
+137,"UBERON:0010388","A.L. 288-1bc","axial","R",FALSE,"fragment","Proximal"
+138,"UBERON:0002231","A.L. 288-1bd","axial","UNK",FALSE,"fragment","Diaphysis"
+139,"UBERON:0002231","A.L. 288-1be","axial","R",FALSE,"fragment","Proximal, Diaphysis"
+140,"UBERON:0002231","A.L. 288-1bf","axial","R",FALSE,"fragment","Diaphysis"
+141,"UBERON:0010424","A.L. 288-1bg","axial","L",FALSE,"fragment","Distal"
+142,"UBERON:0010424","A.L. 288-1bh","axial","R",FALSE,"fragment","Distal"
+143,"UBERON:0010424","A.L. 288-1bi","axial","L",FALSE,"fragment","Distal"
+144,"UBERON:0002231","A.L. 288-1bj","axial","L",FALSE,"fragment","Diaphysis"
+145,"UBERON:0002231","A.L. 288-1bk","axial","R",FALSE,"fragment","Diaphysis"
+147,"UBERON:0002231","A.L. 288-1bm","axial","L",FALSE,"fragment","Diaphysis"
+148,"UBERON:0002231","A.L. 288-1bn","axial","L",FALSE,"fragment","Diaphysis"
+149,"UBERON:0002231","A.L. 288-1bo","axial","L",FALSE,"fragment","Diaphysis"
+150,"UBERON:0002231","A.L. 288-1bp","axial","R",FALSE,"fragment","Diaphysis"
+151,"UBERON:0010424","A.L. 288-1bq","axial","R",FALSE,"fragment","Distal"
+159,"UBERON:0002231","A.L. 288-1by","axial","UNK",FALSE,"fragment","Diaphysis"
+152,"UBERON:0002231","A.L. 288-1br","axial","R",FALSE,"fragment","Diaphysis"
+158,"UBERON:0010424","A.L. 288-1bx","axial","L",FALSE,"fragment","Distal"
+157,"UBERON:0002231","A.L. 288-1bw","axial","L",FALSE,"fragment","Diaphysis"
+153,"UBERON:0002231","A.L. 288-1bs","axial","R",FALSE,"fragment","Diaphysis"
+156,"UBERON:0010424","A.L. 288-1bv","axial","R",FALSE,"fragment","Distal"
+154,"UBERON:0002231","A.L. 288-1bt","axial","UNK",FALSE,"fragment","Diaphysis"
+155,"UBERON:0002228","A.L. 288-1bu","axial","UNK",FALSE,"fragment","nan"
+164,"UBERON:0000209","A.L. 288-1h","cranial","R",FALSE,"fragment","nan"
+125,"UBERON:0000979","A.L. 288-1ar","appendicular","R",FALSE,"nearly complete","Distal"
+127,"UBERON:0001446","A.L. 288-1at","appendicular","R",FALSE,"fragment","Distal"
+176,"UBERON:0000976","A.L. 288-1m","appendicular","R",FALSE,"complete","Proximal, Distal, Diaphysis"
+179,"UBERON:0001423","A.L. 288-1p","appendicular","R",FALSE,NA,"Proximal"
+180,"UBERON:0001423","A.L. 288-1q","appendicular","R",FALSE,NA,"Distal"
+177,"UBERON:0001424","A.L. 288-1n","appendicular","R",FALSE,"nearly complete","Proximal"
+178,"UBERON:0001424","A.L. 288-1o","appendicular","R",FALSE,"nearly complete","Distal"
+160,"UBERON:0001105","A.L. 288-1bz","appendicular","UNK",FALSE,"fragment","nan"
+175,"UBERON:0006849","A.L. 288-1l","appendicular","R",FALSE,"fragment","nan"
+126,"UBERON:0002395","A.L. 288-1as","appendicular","R",FALSE,"complete","nan"
+190,"UBERON:0001098","A.L. 293-3","cranial","UNK",TRUE,NA,"nan"
+230,"UBERON:0001676","A.L. 333-114","cranial","L",FALSE,"fragment","nan"
+225,"UBERON:0001424","A.L. 333-11","appendicular","R",FALSE,"fragment","Proximal"
+189,"UBERON:0004301","A.L. 288-1z","appendicular","L",FALSE,"fragment","intermediate"
+229,"UBERON:0002495","A.L. 333-113","appendicular","UNK",FALSE,"fragment","nan"
+188,"UBERON:0004302","A.L. 288-1y","appendicular","L",FALSE,"fragment","Proximal"
+187,"UBERON:0004302","A.L. 288-1x","appendicular","L",FALSE,"fragment","Proximal"
+215,"UBERON:0002234","A.L. 333-102","appendicular","UNK",FALSE,"complete","Proximal"
+237,"UBERON:0004332","A.L. 333-115f","appendicular","L",FALSE,"complete","nan"
+238,"UBERON:0004333","A.L. 333-115g","appendicular","L",TRUE,"complete","nan"
+239,"UBERON:0004334","A.L. 333-115h","appendicular","L",FALSE,"complete","nan"
+241,"UBERON:0004336","A.L. 333-115j","appendicular","L",FALSE,"complete","nan"
+242,"UBERON:0004326","A.L. 333-115k","appendicular","L",FALSE,"complete","nan"
+243,"UBERON:0004327","A.L. 333-115l","appendicular","L",FALSE,"complete","nan"
+186,"UBERON:0001432","A.L. 288-1w","appendicular","L",FALSE,"complete","nan"
+214,"UBERON:0001093","A.L. 333-101","axial","MID",FALSE,"complete","nan"
+221,"UBERON:0002413","A.L. 333-106","axial","MID",FALSE,NA,"nan"
+226,"UBERON:0000981","A.L. 333-110","appendicular","L",FALSE,"fragment","Distal"
+228,"UBERON:0001678","A.L. 333-112","cranial","R",FALSE,"fragment","nan"
+227,"UBERON:0000981","A.L. 333-111","appendicular","R",FALSE,"fragment","nan"
+204,"UBERON:0000979","A.L. 330-6","appendicular","R",FALSE,"fragment","Proximal, Epiphysis, Metaphysis"
+181,"UBERON:0000976","A.L. 288-1r","appendicular","L",FALSE,NA,"Proximal"
+182,"UBERON:0000976","A.L. 288-1s","appendicular","L",FALSE,NA,"Distal"
+197,"UBERON:0013749","A.L. 322-1","appendicular","L",FALSE,"fragment","Distal, Epiphysis, Metaphysis"
+6945,"UBERON:0001684","A.L. 333w-58","cranial","BOTH",TRUE,"fragment",NA
+224,"UBERON:0004652","A.L. 333-109","appendicular","UNK",FALSE,"nearly complete","Diaphysis"
+185,"UBERON:0001423","A.L. 288-1v","appendicular","L",FALSE,"fragment","Distal"
+183,"UBERON:0001424","A.L. 288-1t","appendicular","L",FALSE,"nearly complete","Proximal"
+184,"UBERON:0001424","A.L. 288-1u","appendicular","L",FALSE,NA,"Distal"
+6901,"UBERON:0001424","A.L. 288-tu","appendicular","L",FALSE,"nearly complete","nan"
+232,"UBERON:0003650","A.L. 333-115a","appendicular","L",FALSE,NA,"nan"
+233,"UBERON:0003651","A.L. 333-115b","appendicular","L",FALSE,NA,"nan"
+234,"UBERON:0003652","A.L. 333-115c","appendicular","L",FALSE,NA,"nan"
+235,"UBERON:0003653","A.L. 333-115d","appendicular","L",FALSE,NA,"nan"
+236,"UBERON:0003654","A.L. 333-115e","appendicular","L",FALSE,NA,"nan"
+222,"UBERON:0000976","A.L. 333-107","appendicular","R",FALSE,"nearly complete","Proximal"
+191,"UBERON:0003655","A.L. 309-8","cranial","UNK",TRUE,"nearly complete","nan"
+6952,"UBERON:7500053","A.L. 333w-60","cranial","L",TRUE,"complete",NA
+217,"UBERON:8490018","A.L. 333-104","cranial","R",TRUE,"complete","Maxillary, Upper, Deciduous, RC"
+6914,"UBERON:0003864","A.L. 333-151","appendicular","UNK",FALSE,"complete","Intermediate"
+6910,"UBERON:0000981","A.L. 333-131","appendicular","R",FALSE,"fragment","Proximal, Diaphysis"
+250,"UBERON:0001446","A.L. 333-120","appendicular","L",FALSE,"nearly complete","nan"
+261,"UBERON:0003864","A.L. 333-148","appendicular","UNK",FALSE,"fragment","Distal"
+262,"UBERON:0003864","A.L. 333-149","appendicular","UNK",FALSE,"complete","Intermediate"
+264,"UBERON:0003864","A.L. 333-150","appendicular","UNK",FALSE,"complete","Intermediate"
+271,"UBERON:0004332","A.L. 333-158","appendicular","R",FALSE,"fragment","Proximal"
+267,"UBERON:0004335","A.L. 333-154","appendicular","R",FALSE,"complete","Proximal"
+272,"UBERON:0004314","A.L. 333-159","appendicular","UNK",FALSE,"complete","Distal"
+244,"UBERON:0003867","A.L. 333-115m","appendicular","L",FALSE,"complete","nan"
+6902,"nan","A.L. 333-123","appendicular","UNK",FALSE,NA,"nan"
+6903,"nan","A.L. 333-124","appendicular","UNK",FALSE,NA,"nan"
+248,"UBERON:0001424","A.L. 333-119","appendicular","L",FALSE,"fragment","nan"
+6906,"nan","A.L. 333-127","appendicular","UNK",FALSE,NA,"nan"
+6908,"nan","A.L. 333-129","appendicular","UNK",FALSE,NA,"nan"
+6909,"nan","A.L. 333-130","appendicular","UNK",FALSE,NA,"nan"
+6913,"nan","A.L. 333-135","appendicular","UNK",FALSE,NA,"nan"
+6905,"nan","A.L. 333-126","appendicular","UNK",FALSE,NA,"nan"
+6907,"nan","A.L. 333-128","appendicular","UNK",FALSE,NA,"nan"
+6911,"nan","A.L. 333-132","appendicular","UNK",FALSE,NA,"nan"
+265,"UBERON:0002347","A.L. 333-152","axial","MID",FALSE,"nearly complete","nan"
+278,"UBERON:0002228","A.L. 333-164","axial","UNK",FALSE,"fragment","nan"
+275,"UBERON:0002228","A.L. 333-161","axial","UNK",FALSE,"fragment","nan"
+268,"UBERON:0002228","A.L. 333-155","axial","L",FALSE,"complete","nan"
+247,"UBERON:0002228","A.L. 333-118","axial","UNK",FALSE,NA,"nan"
+269,"UBERON:0002228","A.L. 333-156","axial","UNK",FALSE,"fragment","nan"
+255,"UBERON:0000981","A.L. 333-140","appendicular","R",FALSE,"fragment","Distal, Epiphysis, Metaphysis"
+257,"UBERON:0000981","A.L. 333-142","appendicular","R",FALSE,"fragment","Proximal, Epiphysis, Metaphysis"
+276,"UBERON:0000981","A.L. 333-162","appendicular","L",FALSE,"fragment","Proximal, Diaphysis"
+246,"UBERON:0000981","A.L. 333-117","appendicular","UNK",FALSE,"fragment","nan"
+251,"UBERON:0001423","A.L. 333-121","appendicular","UNK",FALSE,NA,"nan"
+249,"UBERON:0001424","A.L. 333-12","appendicular","R",FALSE,"fragment","Distal"
+252,"UBERON:0003648","A.L. 333-122","appendicular","R",FALSE,NA,"nan"
+254,"UBERON:0003649","A.L. 333-14","appendicular","R",FALSE,"complete","nan"
+256,"UBERON:0003649","A.L. 333-141","appendicular","R",FALSE,"complete","nan"
+258,"UBERON:0003647","A.L. 333-144","appendicular","R",FALSE,"nearly complete","Proximal"
+263,"UBERON:0003646","A.L. 333-15","appendicular","L",FALSE,"nearly complete","Proximal"
+266,"UBERON:0003647","A.L. 333-153","appendicular","L",FALSE,"nearly complete","Proximal"
+273,"UBERON:0003647","A.L. 333-16","appendicular","L",FALSE,"complete","nan"
+253,"UBERON:0003654","A.L. 333-13","appendicular","L",FALSE,"nearly complete","Proximal"
+274,"UBERON:0003653","A.L. 333-160","appendicular","L",FALSE,"complete","nan"
+277,"UBERON:0003651","A.L. 333-163","appendicular","R",FALSE,"nearly complete","Proximal, Epiphysis, Diaphysis, Metaphysis"
+260,"UBERON:0002395","A.L. 333-147","appendicular","R",FALSE,"complete","nan"
+6904,"nan","A.L. 333-125","cranial","UNK",FALSE,NA,"nan"
+6912,"UBERON:0002412","A.L. 333-134","axial","MID",FALSE,"complete","nan"
+306,"nan","A.L. 333-34",NA,"nan",NA,NA,"nan"
+325,"UBERON:0003864","A.L. 333-46","appendicular","UNK",FALSE,"complete","Intermediate"
+6918,"UBERON:0002347","A.L. 333-53","axial","MID",FALSE,"fragment","nan"
+296,"UBERON:0003864","A.L. 333-25","appendicular","UNK",FALSE,"complete","Intermediate"
+304,"UBERON:0004301","A.L. 333-32","appendicular","UNK",FALSE,NA,"nan"
+297,"UBERON:0004302","A.L. 333-26","appendicular","UNK",FALSE,"complete","Proximal"
+283,"UBERON:0002234","A.L. 333-19","appendicular","UNK",FALSE,"nearly complete","Proximal"
+293,"UBERON:0002234","A.L. 333-22","appendicular","UNK",FALSE,"complete","Proximal"
+303,"UBERON:0002234","A.L. 333-31","appendicular","UNK",FALSE,"complete","Proximal"
+305,"UBERON:0002234","A.L. 333-33","appendicular","UNK",FALSE,"complete","nan"
+328,"UBERON:0002234","A.L. 333-49","appendicular","UNK",FALSE,"fragment","Proximal"
+323,"UBERON:7500053","A.L. 333-44","cranial","L",TRUE,"complete","Maxillary, Upper"
+313,"UBERON:0001432","A.L. 333-40","appendicular","R",FALSE,"complete","nan"
+299,"UBERON:0001453","A.L. 333-28","appendicular","R",FALSE,"complete","Medial"
+331,"UBERON:0002347","A.L. 333-51","axial","MID",FALSE,"nearly complete","nan"
+294,"UBERON:0000210","A.L. 333-23","cranial","UNK",FALSE,"fragment","nan"
+301,"UBERON:0000981","A.L. 333-3","appendicular","R",FALSE,"fragment","Proximal, Epiphysis, Metaphysis"
+295,"UBERON:0001678","A.L. 333-24","cranial","L",FALSE,"complete","nan"
+312,"UBERON:0000981","A.L. 333-4","appendicular","R",FALSE,"nearly complete","Distal"
+314,"UBERON:0009980","A.L. 333-41","appendicular","R",FALSE,"fragment","Distal"
+311,"UBERON:0000979","A.L. 333-39","appendicular","L",FALSE,"nearly complete","Proximal"
+315,"UBERON:0000979","A.L. 333-42","appendicular","L",FALSE,"nearly complete","Proximal"
+329,"UBERON:0000979","A.L. 333-5","appendicular","L",FALSE,"fragment","Proximal"
+300,"UBERON:0000976","A.L. 333-29","appendicular","L",FALSE,"nearly complete","Distal"
+310,"UBERON:0001424","A.L. 333-38","appendicular","L",FALSE,"nearly complete","Distal"
+281,"UBERON:0003649","A.L. 333-17","appendicular","R",FALSE,"nearly complete","Distal"
+282,"UBERON:0003648","A.L. 333-18","appendicular","R",FALSE,"nearly complete","Distal"
+327,"UBERON:0003646","A.L. 333-48","appendicular","L",FALSE,"complete","nan"
+292,"UBERON:0003650","A.L. 333-21","appendicular","UNK",FALSE,"complete","Distal"
+309,"UBERON:0001450","A.L. 333-37","appendicular","R",FALSE,"fragment",NA
+302,"UBERON:8490022","A.L. 333-30","cranial","R",TRUE,"complete","Mandibular, Lower, Deciduous, RM1"
+6917,"UBERON:0003129","A.L. 333-43/86","axial","BOTH",FALSE,NA,"nan"
+332,"UBERON:0003655","A.L. 333-52","cranial","UNK",TRUE,"fragment","Mandibular, Lower"
+279,"UBERON:0003675","A.L. 333-165","cranial","UNK",TRUE,"fragment","nan"
+280,"UBERON:0003675","A.L. 333-166","cranial","UNK",TRUE,"fragment","nan"
+324,"UBERON:0003128","A.L. 333-45","cranial","UNK",NA,"nearly complete","nan"
+330,"UBERON:0001433","A.L. 333-50","appendicular","R",FALSE,"complete","nan"
+326,"UBERON:0001451","A.L. 333-47","appendicular","R",FALSE,"complete","nan"
+308,"UBERON:0001451","A.L. 333-36","appendicular","R",FALSE,"complete","nan"
+307,"UBERON:8490023","A.L. 333-35","cranial","R",TRUE,"complete","Mandibular, Lower, Deciduous"
+344,"UBERON:0003864","A.L. 333-64","appendicular","UNK",FALSE,"complete","Intermediate"
+342,"UBERON:0002234","A.L. 333-62","appendicular","UNK",FALSE,"complete","Proximal"
+336,"UBERON:0002234","A.L. 333-57","appendicular","UNK",FALSE,"complete","Proximal"
+343,"UBERON:0002234","A.L. 333-63","appendicular","UNK",FALSE,"complete","Proximal"
+340,"UBERON:0004302","A.L. 333-60","appendicular","UNK",FALSE,"complete","Proximal"
+352,"UBERON:0003868","A.L. 333-71","appendicular","UNK",FALSE,"complete","Proximal"
+381,"UBERON:0002234","A.L. 333-93","appendicular","UNK",FALSE,"complete","nan"
+349,"UBERON:0002234","A.L. 333-69","appendicular","L",FALSE,"complete","Proximal"
+364,"UBERON:0001430","A.L. 333-80","appendicular","R",FALSE,"complete","nan"
+362,"UBERON:0001454","A.L. 333-79","appendicular","L",FALSE,"complete","Lateral"
+354,"UBERON:0002414","A.L. 333-73","axial","MID",FALSE,"nearly complete","nan"
+365,"UBERON:0002347","A.L. 333-81","axial","MID",FALSE,NA,"nan"
+367,"UBERON:0001092","A.L. 333-83","axial","MID",FALSE,"fragment","nan"
+341,"UBERON:0000981","A.L. 333-61","appendicular","L",FALSE,"fragment","Distal, Diaphysis"
+368,"UBERON:0001678","A.L. 333-84","cranial","R",FALSE,"fragment","nan"
+339,"UBERON:0000979","A.L. 333-6","appendicular","L",FALSE,"fragment","Distal"
+350,"UBERON:0000979","A.L. 333-7","appendicular","L",FALSE,"fragment","Distal"
+376,"UBERON:0000976","A.L. 333-87","appendicular","L",FALSE,"fragment","Proximal"
+335,"UBERON:0003648","A.L. 333-56","appendicular","L",FALSE,"complete","nan"
+337,"UBERON:0003645","A.L. 333-58","appendicular","R",FALSE,"fragment","nan"
+345,"UBERON:0003647","A.L. 333-65","appendicular","R",FALSE,"complete","Proximal"
+351,"UBERON:0003821","A.L. 333-70","appendicular","UNK",FALSE,"complete","nan"
+378,"UBERON:0003649","A.L. 333-89","appendicular","L",FALSE,"complete","nan"
+353,"UBERON:0001448","A.L. 333-72","appendicular","UNK",FALSE,"fragment","nan"
+361,"UBERON:0003654","A.L. 333-78","appendicular","L",FALSE,NA,"Proximal"
+358,"UBERON:4200181","A.L. 333-75","appendicular","R",FALSE,"complete","nan"
+334,"UBERON:0001450","A.L. 333-55","appendicular","L",FALSE,"complete","nan"
+363,"UBERON:0001450","A.L. 333-8","appendicular","R",FALSE,"fragment","nan"
+346,"UBERON:8490044","A.L. 333-66","cranial","L",TRUE,"complete","Maxillary, Upper, Deciduous, RC"
+348,"UBERON:8490050","A.L. 333-68","cranial","L",TRUE,"complete","Mandibular, Lower, Deciduous"
+347,"UBERON:8490019","A.L. 333-67","cranial","R",TRUE,"complete","Maxillary, Upper, Deciduous, RI2"
+360,"UBERON:8490044","A.L. 333-77","cranial","L",TRUE,"complete","Mandibular, Lower, Deciduous, LC"
+369,"UBERON:0001446","A.L. 333-85","appendicular","L",FALSE,"fragment","nan"
+366,"UBERON:8490033","A.L. 333-82","cranial","L",TRUE,"complete","Maxillary, Upper, LI1"
+338,"UBERON:0001684","A.L. 333-59","cranial","R",TRUE,"fragment","RM2, RM3"
+380,"UBERON:0001429","A.L. 333-91","appendicular","L",FALSE,"complete","nan"
+6947,"UBERON:0001684","A.L. 333w-59","cranial","L",TRUE,"complete",NA
+379,"UBERON:8490039","A.L. 333-90","cranial","L",TRUE,"complete","Mandibular, Lower, LC"
+385,"UBERON:0001684","A.L. 333-97","axial","L",TRUE,"fragment","nan"
+383,"UBERON:0000981","A.L. 333-95","appendicular","R",FALSE,NA,"Proximal"
+413,"UBERON:0001684","A.L. 333w-1e","cranial","R",TRUE,NA,"Mandibular, Lower"
+6923,"UBERON:0004660","A.L. 333w-15","cranial","R",TRUE,NA,"Mandibular"
+414,"UBERON:8490031","A.L. 333w-2","cranial","L",TRUE,"complete","Maxillary, Upper, LC"
+427,"UBERON:0001684","A.L. 333w-32","cranial","R",TRUE,NA,"RM3"
+6922,"UBERON:0001446","A.L. 333w-13","appendicular","UNK",FALSE,NA,"nan"
+394,"UBERON:0003865","A.L. 333w-11","appendicular","UNK",FALSE,"complete","Distal"
+415,"UBERON:0002234","A.L. 333w-20","appendicular","UNK",FALSE,"fragment","Proximal"
+419,"UBERON:0002234","A.L. 333w-25","appendicular","UNK",FALSE,"fragment","Proximal"
+423,"UBERON:0004302","A.L. 333w-29","appendicular","UNK",FALSE,"fragment","Proximal"
+436,"UBERON:0003864","A.L. 333w-34","appendicular","UNK",FALSE,"fragment","Intermediate"
+440,"UBERON:0003864","A.L. 333w-38","appendicular","UNK",FALSE,"complete","Intermediate"
+425,"UBERON:0002228","A.L. 333w-30","axial","UNK",FALSE,"fragment","nan"
+397,"UBERON:0002412","A.L. 333w-14","axial","MID",FALSE,NA,"nan"
+400,"UBERON:0004602","A.L. 333w-18","axial","UNK",FALSE,"fragment","nan"
+399,"UBERON:0004601","A.L. 333w-17","axial","UNK",FALSE,"fragment","nan"
+6953,"UBERON:8490036","A.L. 333w-60","cranial","L",TRUE,"complete",NA
+388,"UBERON:0001446","A.L. 333-9a","appendicular","R",FALSE,"fragment","Distal"
+389,"UBERON:0001446","A.L. 333-9b","appendicular","L",FALSE,"fragment","Distal"
+384,"UBERON:0000979","A.L. 333-96","appendicular","L",FALSE,"nearly complete","nan"
+426,"UBERON:0000976","A.L. 333w-31","appendicular","L",FALSE,"fragment","Distal"
+417,"UBERON:0000976","A.L. 333w-22","appendicular","R",FALSE,"fragment","Distal"
+386,"UBERON:0001423","A.L. 333-98","appendicular","R",FALSE,"fragment","Proximal"
+435,"UBERON:0001423","A.L. 333w-33","appendicular","R",FALSE,NA,"Proximal"
+438,"UBERON:0001424","A.L. 333w-36","appendicular","L",FALSE,NA,"Proximal"
+382,"UBERON:0008256","A.L. 333-94","appendicular","L",FALSE,"fragment","nan"
+418,"UBERON:0003646","A.L. 333w-23","appendicular","R",FALSE,NA,"nan"
+420,"UBERON:0003649","A.L. 333w-26","appendicular","L",FALSE,NA,"Proximal"
+437,"UBERON:0003649","A.L. 333w-35","appendicular","UNK",FALSE,NA,"Proximal"
+421,"UBERON:8490035","A.L. 333w-27","cranial","L",TRUE,"complete","LM2"
+422,"UBERON:8490006","A.L. 333w-28","cranial","R",TRUE,"complete","Maxillary, Upper, RI2"
+393,"UBERON:8490013","A.L. 333w-10","cranial","R",TRUE,"complete","Mandibular, Lower"
+411,"UBERON:0007120","A.L. 333w-1c","cranial","R",TRUE,NA,"nan"
+412,"UBERON:0003655","A.L. 333w-1d","cranial","R",TRUE,NA,"nan"
+398,"UBERON:0004657","A.L. 333w-16","cranial","L",FALSE,"nearly complete","Mandibular"
+387,"UBERON:8490031","A.L. 333-99","cranial","L",TRUE,"complete","Maxillary, Upper, Deciduous, LC"
+439,"UBERON:0001446","A.L. 333w-37","appendicular","L",FALSE,"fragment","Distal"
+6954,"UBERON:8490035","A.L. 333w-60","cranial","L",TRUE,"complete",NA
+477,"UBERON:0002347","A.L. 333x-12","axial","MID",FALSE,"complete","nan"
+481,"UBERON:0004413","A.L. 333x-15","appendicular","UNK",FALSE,"fragment","Proximal, Epiphysis"
+454,"UBERON:0003865","A.L. 333w-50","appendicular","UNK",FALSE,"complete","Distal"
+455,"UBERON:0002234","A.L. 333w-51","appendicular","UNK",FALSE,"fragment","Proximal"
+457,"UBERON:0003864","A.L. 333w-53","appendicular","UNK",FALSE,"fragment","Intermediate"
+458,"UBERON:0002234","A.L. 333w-54","appendicular","UNK",FALSE,"fragment","Proximal"
+478,"UBERON:0002234","A.L. 333x-13a","appendicular","UNK",FALSE,"complete","Proximal"
+479,"UBERON:0003864","A.L. 333x-13b","appendicular","UNK",FALSE,"complete","Intermediate"
+483,"UBERON:0003864","A.L. 333x-18","appendicular","UNK",FALSE,"complete","Intermediate"
+486,"UBERON:0003864","A.L. 333x-21a","appendicular","UNK",FALSE,"complete","Intermediate"
+487,"UBERON:0003864","A.L. 333x-21b","appendicular","UNK",TRUE,"complete","Intermediate"
+442,"UBERON:0002234","A.L. 333w-4","appendicular","UNK",FALSE,"complete","nan"
+6925,"nan","A.L. 333x-16","appendicular","UNK",FALSE,NA,"nan"
+489,"UBERON:0000979","A.L. 333x-26","appendicular","R",FALSE,"nearly complete","Proximal"
+473,"UBERON:0002412","A.L. 333w-8","axial","MID",FALSE,"fragment","nan"
+451,"UBERON:0002228","A.L. 333w-47","axial","UNK",FALSE,"fragment","nan"
+448,"UBERON:0002228","A.L. 333w-45","axial","UNK",FALSE,"fragment","nan"
+444,"UBERON:0002228","A.L. 333w-41","axial","UNK",FALSE,"fragment","nan"
+460,"UBERON:0000981","A.L. 333w-56","appendicular","R",FALSE,"fragment","Distal"
+446,"UBERON:0003654","A.L. 333w-43","appendicular","UNK",FALSE,"fragment","Proximal"
+443,"UBERON:0000981","A.L. 333w-40","appendicular","R",FALSE,"fragment","Proximal"
+6949,"UBERON:8490015","A.L. 333w-60","cranial","R",TRUE,"complete",NA
+441,"UBERON:0003645","A.L. 333w-39","appendicular","R",FALSE,NA,"nan"
+453,"UBERON:0003649","A.L. 333w-5","appendicular","R",FALSE,NA,"Distal"
+470,"UBERON:0003647","A.L. 333w-6","appendicular","R",FALSE,NA,"Proximal"
+475,"UBERON:8490040","A.L. 333w-9b","cranial","L",TRUE,"complete","Mandibular, Lower, LI2"
+476,"UBERON:8490000","A.L. 333x-1","cranial","R",TRUE,"complete","Maxillary, Upper, RM3"
+484,"UBERON:8490032","A.L. 333x-2","cranial","L",TRUE,"complete","Maxillary, Upper, LI2"
+485,"UBERON:8490007","A.L. 333x-20","cranial","R",TRUE,"complete","Maxillary, Upper, RI1"
+488,"UBERON:8490051","A.L. 333x-25","cranial","L",TRUE,"complete","Deciduous"
+6924,"UBERON:0001684","A.L. 333w-60/32","cranial","UNK",TRUE,NA,"nan"
+445,"UBERON:7500058","A.L. 333w-42","cranial","R",TRUE,"complete","Maxillary, Upper, RP4"
+474,"UBERON:8490041","A.L. 333w-9a","cranial","L",TRUE,"complete","Mandibular, Lower, LI1"
+482,"UBERON:8490006","A.L. 333x-17","cranial","R",TRUE,NA,"Maxillary, Upper, RI2"
+456,"UBERON:0004657","A.L. 333w-52","cranial","L",TRUE,"nearly complete","nan"
+452,"UBERON:8490009","A.L. 333w-48","cranial","R",TRUE,"complete","Mandibular, Lower, RM2"
+558,"UBERON:0001684","A.L. 433-1b","axial","R",TRUE,"nearly complete","Mandibular, Lower"
+490,"UBERON:8490031","A.L. 333x-3","cranial","L",TRUE,"complete","Maxillary, Upper, LC"
+595,"UBERON:0002397","A.L. 438-1s","cranial","UNK",TRUE,"fragment","Maxillary, Upper"
+6928,"UBERON:0001028","A.L. 438-1p","appendicular","L",FALSE,"fragment","Diaphysis"
+6927,"UBERON:0003821","A.L. 388-34","appendicular","UNK",FALSE,"complete","nan"
+592,"UBERON:0004652","A.L. 438-1n","appendicular","UNK",FALSE,"fragment","Diaphysis"
+551,"UBERON:0001676","A.L. 427-1b","cranial","UNK",FALSE,NA,"nan"
+580,"UBERON:0000209","A.L. 438-1b","cranial","UNK",FALSE,"fragment","nan"
+581,"UBERON:0004652","A.L. 438-1c","appendicular","R",FALSE,"fragment","Proximal, Diaphysis"
+492,"UBERON:0001424","A.L. 333x-5","appendicular","R",FALSE,NA,"Proximal"
+579,"UBERON:0001424","A.L. 438-1a","appendicular","L",FALSE,"complete","nan"
+591,"UBERON:0001424","A.L. 438-1m","appendicular","R",FALSE,"fragment","Diaphysis"
+494,"UBERON:0008255","A.L. 333x-9","appendicular","R",FALSE,"fragment","nan"
+495,"UBERON:8490034","A.L. 366-1","cranial","L",TRUE,"complete","Mandibular, Lower, LM3"
+597,"UBERON:0001105","A.L. 438-1v","appendicular","L",FALSE,"fragment","nan"
+582,"UBERON:0003647","A.L. 438-1d","appendicular","L",FALSE,"complete","nan"
+583,"UBERON:0003646","A.L. 438-1e","appendicular","L",FALSE,"complete","nan"
+584,"UBERON:0003646","A.L. 438-1f","appendicular","R",FALSE,"complete","nan"
+493,"UBERON:0008255","A.L. 333x-6","appendicular","R",FALSE,"fragment","nan"
+496,"UBERON:0018562","A.L. 366-6","cranial","UNK",TRUE,"complete","nan"
+529,"UBERON:0004766","A.L. 417-1c","cranial","UNK",FALSE,"fragment","nan"
+587,"UBERON:8490008","A.L. 438-1i","cranial","R",TRUE,"complete","Mandibular, Lower, RM3"
+491,"UBERON:8490007","A.L. 333x-4","cranial","R",TRUE,"complete","Maxillary, Upper, RI1"
+576,"UBERON:0007120","A.L. 437-2b","cranial","UNK",TRUE,"complete","nan"
+589,"UBERON:7500058","A.L. 438-1k","cranial","R",TRUE,"nearly complete","Maxillary, Upper, RP4"
+552,"UBERON:0003655","A.L. 427-1c","cranial","UNK",TRUE,"nearly complete","nan"
+497,"UBERON:8490026","A.L. 388-1","cranial","L",TRUE,"complete","Maxillary, Upper, LM3"
+577,"UBERON:0003655","A.L. 437-2c","cranial","UNK",TRUE,"nearly complete","nan"
+596,"UBERON:0008854","A.L. 438-1u","cranial","L",TRUE,"fragment","Mandibular, Lower"
+514,"UBERON:8490005","A.L. 400-1b","cranial","R",TRUE,"complete","Maxillary, Upper, RC"
+559,"UBERON:0003655","A.L. 433-1c","cranial","UNK",TRUE,"nearly complete","nan"
+588,"UBERON:8490015","A.L. 438-1j","cranial","R",TRUE,"complete","Maxillary, Upper, RI1"
+586,"UBERON:8490010","A.L. 438-1h","cranial","R",TRUE,"complete","Mandibular, Lower, RM1"
+594,"UBERON:0008854","A.L. 438-1q","cranial","UNK",TRUE,"fragment","Maxillary, Upper"
+585,"UBERON:0001684","A.L. 438-1g","cranial","R",TRUE,"nearly complete","Mandibular, Lower"
+578,"UBERON:0018579","A.L. 438-1","cranial","R",TRUE,"complete","RM2"
+6926,"UBERON:0008255","A.L. 333x-6/9","appendicular","R",FALSE,"nearly complete","shaft"
+685,"UBERON:0002397","A.L. 487-1e","cranial","L",TRUE,"nearly complete","nan"
+6950,"UBERON:8490014","A.L. 333w-60","cranial","R",TRUE,"complete",NA
+6929,"nan","A.L. 444-1","cranial","UNK",FALSE,NA,"nan"
+600,"UBERON:0004331","A.L. 438-4","appendicular","R",FALSE,"fragment","Proximal"
+657,"UBERON:0002234","A.L. 444-4","appendicular","UNK",FALSE,"complete","Proximal"
+658,"UBERON:0003864","A.L. 444-5","appendicular","UNK",FALSE,"fragment","Intermediate"
+662,"UBERON:0002413","A.L. 444-9","axial","MID",FALSE,"fragment","nan"
+661,"UBERON:0002347","A.L. 444-8","axial","MID",FALSE,"fragment","nan"
+660,"UBERON:0002414","A.L. 444-7","axial","MID",FALSE,"nearly complete","nan"
+617,"UBERON:0002347","A.L. 444-11","axial","MID",FALSE,"fragment","nan"
+616,"UBERON:0002347","A.L. 444-10","axial","MID",FALSE,"fragment","nan"
+655,"UBERON:0001428","A.L. 444-3","appendicular","R",FALSE,"complete","nan"
+664,"UBERON:0000210","A.L. 457-2","cranial","R",FALSE,"nearly complete","nan"
+648,"UBERON:0000210","A.L. 444-2e","cranial","L",FALSE,"complete","nan"
+601,"UBERON:0001676","A.L. 439-1","cranial","BOTH",FALSE,"complete","nan"
+624,"UBERON:0001676","A.L. 444-1b","cranial","L",FALSE,"nearly complete","nan"
+647,"UBERON:0000209","A.L. 444-2d","cranial","UNK",FALSE,NA,"nan"
+688,"UBERON:0000979","A.L. 545-3","appendicular","L",FALSE,"nearly complete","Distal, Epiphysis, Diaphysis, Metaphysis"
+646,"UBERON:0001683","A.L. 444-2c","cranial","R",FALSE,NA,"nan"
+623,"UBERON:0001676","A.L. 444-1a","cranial","R",FALSE,"nearly complete","nan"
+621,"UBERON:0000976","A.L. 444-15","appendicular","R",FALSE,"fragment","Distal"
+620,"UBERON:0000976","A.L. 444-14","appendicular","L",FALSE,"fragment","Distal"
+619,"UBERON:0000976","A.L. 444-13","appendicular","L",FALSE,"fragment","Distal, Diaphysis"
+659,"UBERON:8490021","A.L. 444-6","cranial","R",TRUE,"nearly complete","nan"
+686,"UBERON:8490039","A.L. 487-1f","cranial","L",TRUE,"complete","nan"
+626,"UBERON:0001098","A.L. 444-29","cranial","UNK",TRUE,"complete","nan"
+598,"UBERON:0007120","A.L. 438-2","cranial","R",TRUE,"complete","nan"
+610,"UBERON:0003655","A.L. 441-1","cranial","UNK",TRUE,"nearly complete","nan"
+622,"UBERON:0003655","A.L. 444-16","cranial","L",TRUE,"nearly complete","nan"
+656,"UBERON:0003655","A.L. 444-30","cranial","UNK",TRUE,"nearly complete","nan"
+691,"UBERON:0002397","A.L. 58-22b","cranial","R",TRUE,"fragment","Maxillary, Upper"
+663,"UBERON:0003655","A.L. 452-18","cranial","UNK",TRUE,"nearly complete","nan"
+666,"UBERON:0003655","A.L. 465-5","cranial","UNK",TRUE,"nearly complete","nan"
+689,"UBERON:0003655","A.L. 557-1","cranial","UNK",TRUE,"complete","nan"
+599,"UBERON:7500054","A.L. 438-3","cranial","L",TRUE,"nearly complete","nan"
+652,"UBERON:0000210","A.L. 444-2g","cranial","R",FALSE,"nearly complete","nan"
+687,"UBERON:8490013","A.L. 487-1g","cranial","R",TRUE,"complete","nan"
+723,"UBERON:0004766","A.L. 701-1","axial","UNK",NA,NA,"nan"
+52,"UBERON:7500059","A.L. 199-1","cranial","R",TRUE,"complete",NA
+53,"UBERON:7500058","A.L. 199-1","cranial","R",TRUE,"complete",NA
+60,"UBERON:0002397","A.L. 200-1a","cranial","BOTH",TRUE,"complete",NA
+67,"UBERON:7500059","A.L. 200-1a","cranial","L",TRUE,"complete",NA
+68,"UBERON:7500058","A.L. 200-1a","cranial","L",TRUE,"complete",NA
+69,"UBERON:7500059","A.L. 200-1a","cranial","R",TRUE,"complete",NA
+70,"UBERON:7500058","A.L. 200-1a","cranial","R",TRUE,"complete",NA
+726,"UBERON:0001684","A.L. 729-1","cranial","UNK",TRUE,NA,"nan"
+729,"UBERON:0001684","A.L. 766-1","cranial","UNK",TRUE,NA,"nan"
+731,"UBERON:0002397","A.L. 770-1a","cranial","L",TRUE,NA,"nan"
+732,"UBERON:0002397","A.L. 770-1b","cranial","R",TRUE,NA,"nan"
+736,"UBERON:0000981","A.L. 827-1","appendicular","L",FALSE,"complete","Proximal, Epiphysis, Diaphysis, Metaphysis"
+87,"UBERON:0001684","A.L. 237-3","cranial","L",TRUE,"nearly complete","Mandibular, Lower"
+725,"UBERON:0004302","A.L. 724-3","appendicular","UNK",FALSE,"nearly complete","Proximal"
+6937,"UBERON:0001684","A.L. 333-74","cranial","L",TRUE,"fragment",NA
+730,"UBERON:0000976","A.L. 769-1","appendicular","R",FALSE,NA,"nan"
+212,"UBERON:7500054","A.L. 333-10","cranial","L",TRUE,"complete","nan"
+6933,"UBERON:0001684","A.L. 333-10","cranial","UNK",TRUE,"fragment",NA
+727,"UBERON:8490008","A.L. 762-1","cranial","R",TRUE,"nearly complete","nan"
+722,"UBERON:0007120","A.L. 699-1","cranial","UNK",TRUE,"nearly complete","nan"
+708,"UBERON:0007120","A.L. 655-1","cranial","UNK",TRUE,"complete","nan"
+733,"UBERON:8490021","A.L. 772-1","cranial","R",TRUE,"nearly complete","nan"
+721,"UBERON:0003655","A.L. 697-1","cranial","UNK",TRUE,"nearly complete","nan"
+709,"UBERON:8490008","A.L. 660-1","cranial","L",TRUE,"nearly complete","nan"
+728,"UBERON:8490031","A.L. 763-1","cranial","L",TRUE,"complete","Maxillary, Upper, LC"
+59,"UBERON:8490006","A.L. 200-1a","cranial","R",TRUE,"complete",NA
+735,"UBERON:0003129","A.L. 822-1","cranial","BOTH",NA,"nearly complete","nan"
+6935,"UBERON:0002397","A.L. 333-2","cranial","BOTH",TRUE,"nearly complete",NA
+6930,"UBERON:0002397","A.L. 922-1","cranial","UNK",TRUE,"complete","nan"
+6931,"UBERON:0002397","A.L. 333-1","cranial","BOTH",TRUE,"nearly complete",NA
+471,"UBERON:0001684","A.L. 333w-60","cranial","BOTH",TRUE,"nearly complete","Mandibular, Lower, RI1, RI2, RC, LP3, LP4, LM1, LM2, LM3"
+503,"UBERON:0001684","A.L. 400-1a","cranial","BOTH",TRUE,"complete",NA
+510,"UBERON:7500054","A.L. 400-1a","cranial","L",TRUE,"complete",NA
+511,"UBERON:7500053","A.L. 400-1a","cranial","L",TRUE,"complete",NA
+512,"UBERON:7500054","A.L. 400-1a","cranial","R",TRUE,"complete",NA
+513,"UBERON:7500053","A.L. 400-1a","cranial","R",TRUE,"complete",NA
+518,"UBERON:0002397","A.L. 413-1","cranial","R",TRUE,"fragment","Maxillary, Upper"
+539,"UBERON:7500059","A.L. 417-1d","cranial","L",TRUE,"complete",NA
+540,"UBERON:7500058","A.L. 417-1d","cranial","L",TRUE,"complete",NA
+541,"UBERON:7500059","A.L. 417-1d","cranial","R",TRUE,"complete",NA
+542,"UBERON:7500058","A.L. 417-1d","cranial","R",TRUE,"complete",NA
+543,"UBERON:0002397","A.L. 417-1d","cranial","BOTH",TRUE,"complete",NA
+679,"UBERON:0001684","A.L. 487-1b","cranial","L",TRUE,NA,"nan"
+699,"UBERON:0001684","A.L. 604-1","cranial","L",TRUE,"nearly complete","nan"
+719,"UBERON:7500059","A.L. 666-1","cranial","R",TRUE,"complete",NA
+720,"UBERON:7500058","A.L. 666-1","cranial","R",TRUE,"complete",NA
+724,"UBERON:0004302","A.L. 724-1","appendicular","UNK",FALSE,"complete","nan"
+738,"UBERON:8490005","A.L. 992-1","cranial","R",TRUE,"nearly complete",NA
+501,"UBERON:8490040","A.L. 400-1a","cranial","R",TRUE,"complete",NA
+502,"UBERON:8490014","A.L. 400-1a","cranial","R",TRUE,"complete",NA
+504,"UBERON:8490036","A.L. 400-1a","cranial","L",TRUE,"complete",NA
+537,"UBERON:8490001","A.L. 417-1d","cranial","R",TRUE,"complete",NA
+538,"UBERON:8490000","A.L. 417-1d","cranial","R",TRUE,"complete",NA
+6965,"UBERON:8490009","A.L. 411-1","cranial","R",TRUE,"complete",NA
+749,"UBERON:7500059","A.L. 992-1","cranial","L",TRUE,"nearly complete",NA
+750,"UBERON:7500058","A.L. 992-1","cranial","L",TRUE,"nearly complete",NA
+751,"UBERON:7500059","A.L. 992-1","cranial","R",TRUE,"nearly complete",NA
+752,"UBERON:7500058","A.L. 992-1","cranial","R",TRUE,"nearly complete",NA
+753,"UBERON:0002397","A.L. 992-1","cranial","BOTH",TRUE,"complete",NA
+6893,"UBERON:0001684","A.L. 1030-1","cranial","UNK",TRUE,NA,"nan"
+6921,"UBERON:0001684","A.L. 333w-1","cranial","BOTH",TRUE,"nearly complete","nan"
+173,"UBERON:0004657","A.L. 288-1j","cranial","L",TRUE,"fragment","nan"
+6915,"UBERON:0004333","A.L. 333-167","appendicular","L",FALSE,"nearly complete","Proximal"
+6916,"UBERON:0004302","A.L. 333-168","appendicular","R",FALSE,"complete","Proximal"
+134,"UBERON:0000210","A.L. 288-1b","cranial","L",FALSE,"fragment","nan"
+6920,"UBERON:0002231","A.L. 333-n3","axial","UNK",FALSE,"nearly complete","Diaphysis"
+6919,"UBERON:0002495","A.L. 333-92","appendicular","UNK",FALSE,"fragment","nan"
+416,"UBERON:0003221","A.L. 333w-21","appendicular","UNK",FALSE,NA,"nan"
+377,"UBERON:0003864","A.L. 333-88","appendicular","UNK",FALSE,NA,"nan"
+392,"UBERON:0002234","A.L. 333n-2","appendicular","UNK",FALSE,"complete","Distal, Epiphysis, Diaphysis, Metaphysis"
+259,"UBERON:0004333","A.L. 333-145","appendicular","R",FALSE,"complete","Proximal"
+291,"UBERON:0002234","A.L. 333-20","appendicular","UNK",FALSE,"fragment","Proximal"
+472,"UBERON:0002234","A.L. 333w-7","appendicular","UNK",FALSE,"complete","proximal"
+240,"UBERON:0004335","A.L. 333-115i","appendicular","L",TRUE,"complete","nan"
+43,"UBERON:8490014","A.L. 198-18","cranial","R",TRUE,"complete","Mandibular, Lower, RI2"
+41,"UBERON:8490033","A.L. 198-17a","cranial","L",TRUE,"complete","Maxillary, Upper, LI1"
+216,"UBERON:8490013","A.L. 333-103","cranial","R",TRUE,"complete","Mandibular, Lower, RC"
+245,"UBERON:0001676","A.L. 333-116","cranial","L",FALSE,"fragment","nan"
+618,"UBERON:0004662","A.L. 444-12","axial","MID",FALSE,"fragment","nan"
+6,"UBERON:0000981","A.L. 128-1","appendicular","L",FALSE,"fragment","Proximal"
+593,"UBERON:0004652","A.L. 438-1o","appendicular","UNK",FALSE,"fragment","Diaphysis"
+590,"UBERON:0001028","A.L. 438-1l","appendicular","L",FALSE,"fragment","Diaphysis"
+298,"UBERON:0003646","A.L. 333-27","appendicular","R",FALSE,"complete","Distal"
+459,"UBERON:0001448","A.L. 333w-55","appendicular","UNK",FALSE,"fragment","nan"
+270,"UBERON:0003652","A.L. 333-157","appendicular","L",FALSE,"fragment","Proximal"
+333,"UBERON:0003650","A.L. 333-54","appendicular","L",FALSE,"complete","Proximal"
+223,"UBERON:0000401","A.L. 333-108","cranial","L",TRUE,"nearly complete","Mandibular"
+638,"UBERON:7500059","A.L. 444-2a","cranial","L",TRUE,"complete",NA
+639,"UBERON:7500058","A.L. 444-2a","cranial","L",TRUE,"complete",NA
+640,"UBERON:7500058","A.L. 444-2a","cranial","R",TRUE,"complete",NA
+690,"UBERON:0001676","A.L. 58-22","cranial","R",FALSE,"fragment","nan"
+739,"UBERON:8490033","A.L. 992-1","cranial","L",TRUE,"nearly complete",NA
+740,"UBERON:8490032","A.L. 992-1","cranial","L",TRUE,"nearly complete",NA
+741,"UBERON:8490007","A.L. 992-1","cranial","R",TRUE,"nearly complete",NA
+742,"UBERON:8490006","A.L. 992-1","cranial","R",TRUE,"nearly complete",NA
+743,"UBERON:8490028","A.L. 992-1","cranial","L",TRUE,"nearly complete",NA
+665,"UBERON:8490034","A.L. 462-7","cranial","L",TRUE,"complete","nan"
+633,"UBERON:8490027","A.L. 444-2a","cranial","L",TRUE,"complete",NA
+634,"UBERON:8490026","A.L. 444-2a","cranial","L",TRUE,"complete",NA
+635,"UBERON:8490002","A.L. 444-2a","cranial","R",TRUE,"complete",NA
+6942,"UBERON:0001684","A.L. 333w-57","cranial","L",TRUE,"fragment",NA
+6956,"UBERON:8490013","A.L. 333w-60","cranial","R",TRUE,"complete",NA
+6955,"UBERON:8490034","A.L. 333w-60","cranial","L",TRUE,"complete",NA
+744,"UBERON:8490027","A.L. 992-1","cranial","L",TRUE,"complete",NA
+745,"UBERON:8490026","A.L. 992-1","cranial","L",TRUE,"complete",NA
+746,"UBERON:8490002","A.L. 992-1","cranial","R",TRUE,"nearly complete",NA
+747,"UBERON:8490001","A.L. 992-1","cranial","R",TRUE,"nearly complete",NA
+748,"UBERON:8490000","A.L. 992-1","cranial","R",TRUE,"nearly complete",NA
+734,"UBERON:8490022","A.L. 777-1","cranial","R",TRUE,"nearly complete","nan"
+636,"UBERON:8490001","A.L. 444-2a","cranial","R",TRUE,"complete",NA
+637,"UBERON:8490000","A.L. 444-2a","cranial","R",TRUE,"complete",NA
+61,"UBERON:8490028","A.L. 200-1a","cranial","L",TRUE,"complete",NA
+62,"UBERON:8490027","A.L. 200-1a","cranial","L",TRUE,"complete",NA
+63,"UBERON:8490026","A.L. 200-1a","cranial","L",TRUE,"complete",NA
+64,"UBERON:8490002","A.L. 200-1a","cranial","R",TRUE,"complete",NA
+65,"UBERON:8490001","A.L. 200-1a","cranial","R",TRUE,"complete",NA
+66,"UBERON:8490000","A.L. 200-1a","cranial","R",TRUE,"complete",NA
+424,"UBERON:8490040","A.L. 333w-3","cranial","L",TRUE,"complete","Mandibular, Lower, LI2"
+359,"UBERON:8490045","A.L. 333-76","cranial","L",TRUE,"complete","Mandibular, Lower, Deciduous"
+505,"UBERON:8490035","A.L. 400-1a","cranial","L",TRUE,"complete",NA
+506,"UBERON:8490034","A.L. 400-1a","cranial","L",TRUE,"complete",NA
+507,"UBERON:8490010","A.L. 400-1a","cranial","R",TRUE,"complete",NA
+508,"UBERON:8490009","A.L. 400-1a","cranial","R",TRUE,"complete",NA
+509,"UBERON:8490008","A.L. 400-1a","cranial","R",TRUE,"complete",NA
+213,"UBERON:0004660","A.L. 333-100","cranial","L",FALSE,"nearly complete","Mandibular"
+480,"UBERON:0004413","A.L. 333x-14","appendicular","UNK",FALSE,"fragment","Proximal, Epiphysis"
