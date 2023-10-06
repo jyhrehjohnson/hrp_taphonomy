@@ -37,11 +37,21 @@ write.csv(hadar_api,"C:\\Users\\JyhrehJohnson\\iCloudDrive\\Documents\\Documents
 
 #Data Merge
 ```{r}
-hadar_df1 <- as.data.frame(hadar_df[,-c(1,5,6,8)]) #remove id,side,dental,preserved part from original hadar data frame
+#When api is pulled, Denné gets 526 fossil specimens comprised of 811 unique skeletal elements
 hadar_api1 <- as.data.frame(hadar_api[,-c(1)]) #remove id from original api data frame
 
-hadar_merge <- merge(hadar_df1, hadar_api1,by.x = "uberon_id", by.y = "uberon_id", all.x = TRUE,all.y = TRUE) #merge the hadar df and api data frames
-hadar_merge <- select(hadar_merge,"fossil","name","uberon_id","anatomical_region.x","anatomical_region.y","completeness") #reorder columns
+#Check for duplicates
+duplicated(hadar_api1$uberon_id)
+hadar_api1[duplicated(hadar_api1$uberon_id),]
+
+hadar_merge <- merge(hadar_df, hadar_api1, by.x="uberon_id", by.y = "uberon_id", all.x = FALSE, all.y = FALSE) #inner join the hadar df and api data frames
+hadar_merge <- select(hadar_merge,"id", "fossil","name","uberon_id", "anatomical_region.y","completeness") #reorder columns
+
+missing <- setdiff(hadar_df$id, hadar_merge$id) #find missing data
+
+
+#hadar_df1 <- as.data.frame(hadar_df[,-c(1,5,6,8)]) #remove id,side,dental,preserved part from original hadar data frame #Deleted because keeping the ID is important 
+#hadar_merge <- merge(hadar_df1, hadar_api1,by.x = "uberon_id", by.y = "uberon_id", all.x = FALSE,all.y = FALSE) 
 ```
 
 #Bivariate Barplot/Expected v. Observed
@@ -62,14 +72,20 @@ count_data <- select(count_data,"regions", "expected_count", "hd_count") #reorde
 dotchart(count_data$hd_count, labels = count_data$regions, bg = "darkorange",
          pt.cex = 1.5, xlim = range(count_data$expected_count, count_data$hd_count) + c(-2, 2))
 points(count_data$expected_count, 1:nrow(count_data), col = "black", pch = 19, cex = 1.5)
+
+#Barplot
+biv_plot <- ggplot(count_data, aes(x=expected_count, fill = regions)) + geom_bar(stat= "identity", position = "dodge") #create barplot
+biv_plot
 ```
 
 #BarStackPlot/For Fragmentation [USE]
 ```{r}
-chisq_plot <- ggbarstats(data = hd_chisq, x = completeness, y = anatomical_region) + labs(caption=NULL) #show the preservation stats for each anatomical region
-chisq_plot
+#UPDATE 
+hd_chisq <- na.omit(hadar_merge[,c("anatomical_region.y", "completeness")])
+chisq_plot <- ggbarstats(data = hd_chisq, x = completeness, y = anatomical_region.y) + labs(caption=NULL) #show the preservation stats for each anatomical region
+chisq_plot #prints the stacked plots per anatomical region
 
-##Density Plot
+#Density Plot
 curve(dchisq(x, df = 4), from = 0, to = 15, main = "Chi-Square Distribution (df = 4)", ylab = 'Density', lwd = 2, col = 'orange')
 ```
 
