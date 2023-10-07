@@ -47,7 +47,7 @@ hadar_api1[duplicated(hadar_api1$uberon_id),]
 hadar_merge <- merge(hadar_df, hadar_api1, by.x="uberon_id", by.y = "uberon_id", all.x = FALSE, all.y = FALSE) #inner join the hadar df and api data frames
 hadar_merge <- select(hadar_merge,"id", "fossil","name","uberon_id", "anatomical_region.y","completeness") #reorder columns
 
-missing <- setdiff(hadar_df$id, hadar_merge$id) #find missing data
+setdiff(hadar_df$id, hadar_merge$id) #find missing data
 
 
 #hadar_df1 <- as.data.frame(hadar_df[,-c(1,5,6,8)]) #remove id,side,dental,preserved part from original hadar data frame #Deleted because keeping the ID is important 
