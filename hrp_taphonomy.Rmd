@@ -74,19 +74,27 @@ dotchart(count_data$hd_count, labels = count_data$regions, bg = "darkorange",
 points(count_data$expected_count, 1:nrow(count_data), col = "black", pch = 19, cex = 1.5)
 
 #Barplot
-biv_plot <- ggplot(count_data, aes(x=expected_count, fill = regions)) + geom_bar(stat= "identity", position = "dodge") #create barplot
-biv_plot
+#biv_plot <- ggplot(count_data, aes(x=hd_count, y=expected_count, fill = regions)) + 
+ # geom_bar(stat= "identity", position = "dodge") #create barplot
+#biv_plot 
 ```
 
 #BarStackPlot/For Fragmentation [USE]
 ```{r}
 #UPDATE 
-hd_chisq <- na.omit(hadar_merge[,c("anatomical_region.y", "completeness")])
+hd_chisq <- na.omit(hadar_merge[,c("anatomical_region.y", "completeness")]) #gives 729 elements 
+hd_chisq2 <- hadar_merge[,c("anatomical_region.y", "completeness")]
+#without na.omit gives 808 elements
+
+sum(is.na(hd_chisq)) #count the number of NAs = 0 NAs /729 elements
+sum(is.na(hd_chisq2)) #count the number of NAs = 80 NAs /728 elements
+#basically the same thing so will get 729 observations like before
+
 chisq_plot <- ggbarstats(data = hd_chisq, x = completeness, y = anatomical_region.y) + labs(caption=NULL) #show the preservation stats for each anatomical region
 chisq_plot #prints the stacked plots per anatomical region
 
 #Density Plot
-curve(dchisq(x, df = 4), from = 0, to = 15, main = "Chi-Square Distribution (df = 4)", ylab = 'Density', lwd = 2, col = 'orange')
+#curve(dchisq(x, df = 4), from = 0, to = 15, main = "Chi-Square Distribution (df = 4)", ylab = 'Density', lwd = 2, col = 'orange')
 ```
 
 #Completeness Distrubtion [Use for completeness count]
