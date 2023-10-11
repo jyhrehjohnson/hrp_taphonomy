@@ -44,7 +44,7 @@ hadar_api1 <- as.data.frame(hadar_api[,-c(1)]) #remove id from original api data
 duplicated(hadar_api1$uberon_id)
 hadar_api1[duplicated(hadar_api1$uberon_id),]
 
-hadar_merge <- merge(hadar_df, hadar_api1, by.x="uberon_id", by.y = "uberon_id", all.x = FALSE, all.y = FALSE) #inner join the hadar df and api data frames
+hadar_merge <- merge(hadar_df, hadar_api1, by.x="uberon_id", by.y = "uberon_id", all.x = FALSE, all.y = FALSE) #inner join the hadar df and api data frames; yields 808/811 observations
 hadar_merge <- select(hadar_merge,"id", "fossil","name","uberon_id", "anatomical_region.y","completeness") #reorder columns
 
 setdiff(hadar_df$id, hadar_merge$id) #find missing data
@@ -58,7 +58,7 @@ setdiff(hadar_df$id, hadar_merge$id) #find missing data
 ```{r}
 #identify proportions & counts; cranial, dental, axial, appendicular
 skeleton.proportions <- c(22/206, 32/206, 26/206, 126/206) #proportions of regions
-expected_count <- c(165, 98, 80, 385) #expected regional counts, calculations in Google Drive/Sheets under "Analysis"
+expected_count <- c(77, 113, 91, 445) #expected regional counts, calculations in Google Drive/Sheets under "Analysis"
 hd_count <- c(114, 357, 68, 189) #observed hadar counts
 
 #Bivariate Data
