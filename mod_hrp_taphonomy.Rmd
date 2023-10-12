@@ -1,5 +1,5 @@
 ---
-title: "Thesis Analysis"
+title: "HRP Taphonomy"
 author: "Jyhreh Johnson"
 date: "2023-10-05"
 output: html_document
@@ -34,22 +34,8 @@ Data used for this project were downloaded from the Origins project website API 
 1. The published hadar fossil data are available at: `r HADAR_URL`  
 2. A dataset of all skeletal elements from Uberon is also available from Origins at: `r SKELETAL_ELEMENTS_URL`. 
 
-```{r explort to CSV}
-# Write df as csv
-#write.csv(hadar_df,"C:\\Users\\JyhrehJohnson\\iCloudDrive\\Documents\\Documents\\UT\\masters_thesis\\hadar_df.csv", row.names=FALSE) #write the Hadar data as a csv file to save on computer and load into a spreadsheet. 
-
-#write.csv(hadar_api,"C:\\Users\\JyhrehJohnson\\iCloudDrive\\Documents\\Documents\\UT\\masters_thesis\\hadar_api.csv", row.names=FALSE) #write the Hadar api as a csv file to save on computer and load into a spreadsheet.
-```
-
 ## Data summary
 ```{r}
-# Merge and clean
-#hadar_df1 <- as.data.frame(hadar_df[,-c(1,5,6,8)]) #remove id,side,dental,preserved part from original hadar data frame
-#hadar_api1 <- as.data.frame(hadar_api[,-c(1)]) #remove id from original api data frame
-
-#hadar_merge <- merge(hadar_df1, hadar_api1,by.x = "uberon_id", by.y = "uberon_id", all.x = FALSE,all.y = FALSE) # merge the hadar df and api data frames
-#hadar_merge <- select(hadar_merge,"fossil","name","uberon_id","anatomical_region.y", completeness") #reorder columns
-
 hadar_merge <- merge(hadar_df, hadar_api,by.x = "uberon_id", by.y = "uberon_id", all.x = FALSE, all.y = FALSE) # merge the hadar df and api data frames
 hadar_merge <- select(hadar_merge,"id.x", "fossil", "name", "uberon_id", "anatomical_region.y", "side", "dental", "completeness", "preserved_part") # select and reorder columns
 
@@ -103,10 +89,10 @@ The number of right and left elements is roughly the same, and not significantly
 
 ### Element representation by anatomical region
 ```{r counts, fig.cap='Figure 1. Difference between exptected and observed frequencies of elements by region. Block dots indicate the expected proportion of elements based on a human skeleton and the orange dots indicate the observed frequency'}
-# Bivariate Barplot/Expected v. Observed
+# Bivariate Dotchart/Expected v. Observed
 # Identify proportions & counts; cranial, dental, axial, appendicular
 skeleton.proportions <- c(22/206, 32/206, 26/206, 126/206) #proportions of regions
-expected_count <- c(165, 98, 80, 385) #expected regional counts, calculations in Google Drive/Sheets under "Analysis"
+expected_count <- c(77, 113, 91, 445) #expected regional counts, calculations in Google Drive/Sheets under "Analysis"
 hd_count <- c(114, 357, 68, 189) #observed hadar counts
 
 #Bivariate Data
@@ -116,39 +102,22 @@ count_data <- cbind(count_data, regions) #combind the count & regions
 count_data <- select(count_data,"regions", "expected_count", "hd_count") #reorder
 #count_data <- data.frame(t(count_data))
 
-#Graph Dotchart
+# Graph Dotchart
 dotchart(count_data$hd_count, labels = count_data$regions, bg = "darkorange",
          pt.cex = 1.5, xlim = range(count_data$expected_count, count_data$hd_count) + c(-2, 2))
 points(count_data$expected_count, 1:nrow(count_data), col = "black", pch = 19, cex = 1.5)
 ```
 
-
-```{r}
-#BarStackPlot/For Fragmentation [USE]
-#chisq_plot <- ggbarstats(data = hd_chisq, x = completeness, y = anatomical_region) + labs(caption=NULL) #show the preservation stats for each anatomical region
-#chisq_plot
-
-##Density Plot
-#curve(dchisq(x, df = 4), from = 0, to = 15, main = "Chi-Square Distribution (df = 4)", ylab = 'Density', lwd = 2, col = 'orange')
-```
-
 ### Fragmentation analysis
 ```{r}
-#Completeness Distrubtion [Use for completeness count]
+# Completeness Distribution [Use for completeness count]
 comp <- table(hadar_merge$completeness)
 comp_df <- as.data.frame(comp)
+comp_df
+
+# Fragmentation distribution by anatomical region
+hd_chisq <- hadar_merge[,c("anatomical_region.y", "completeness")]
+chisq_plot <- ggbarstats(data = hd_chisq, x = completeness, y = anatomical_region.y) + labs(caption=NULL) #show the preservation stats for each anatomical region; 729 observations
+chisq_plot 
 ```
 
-### Uberon counts
-```{r}
-#Uberon Count
-uberon_count <- table(hadar_merge$name, hadar_merge$uberon_id)
-uberon_count_df <- as.data.frame(uberon_count)
-uberon_count_df <- uberon_count_df[-1,]
-```
-
-#Element Count
-```{r}
-element <- table(hadar_merge$name, hadar_merge$uberon_id)
-element_df <- as.data.frame(element)
-```

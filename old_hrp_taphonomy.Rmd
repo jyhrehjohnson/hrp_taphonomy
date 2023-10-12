@@ -16,6 +16,7 @@ library(tidyverse)
 library(dplyr)
 library(jsonlite)
 library(ggstatsplot)
+library(knitr)
 ```
 
 #Load/Reload Data from PaleoCore
@@ -92,9 +93,6 @@ sum(is.na(hd_chisq2)) #count the number of NAs = 80 NAs /728 elements
 
 chisq_plot <- ggbarstats(data = hd_chisq, x = completeness, y = anatomical_region.y) + labs(caption=NULL) #show the preservation stats for each anatomical region
 chisq_plot #prints the stacked plots per anatomical region
-
-#Density Plot
-#curve(dchisq(x, df = 4), from = 0, to = 15, main = "Chi-Square Distribution (df = 4)", ylab = 'Density', lwd = 2, col = 'orange')
 ```
 
 #Completeness Distrubtion [Use for completeness count]
