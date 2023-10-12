@@ -1,0 +1,154 @@
+---
+title: "Thesis Analysis"
+author: "Jyhreh Johnson"
+date: "2023-10-05"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE) # Toggle whether to show R code chunks
+```
+
+
+```{r echo = FALSE, include=FALSE}
+# Preliminaries, Load necessary libraries
+library(ggplot2)
+library(tidyverse)
+library(dplyr)
+library(jsonlite)
+library(ggstatsplot)
+library(knitr)
+```
+
+# Materials and Methods
+```{r load_hadar_data}
+# Load/Reload Data from Origins using the API
+HADAR_URL <- "https://paleocore.org/origins/api/hadarfossilelements/"
+hadar_df <- as.data.frame(fromJSON(HADAR_URL)) # loads in the Hadar fossil elements from paleocore. Make sure to save changes in paleocore before running. 
+# Load Skeletal Element API
+SKELETAL_ELEMENTS_URL<-"https://paleocore.org/origins/api/skeletalelements/"
+hadar_api <- as.data.frame(fromJSON(SKELETAL_ELEMENTS_URL)) #loads in the skeletal elements from Paleo Core API.
+```
+
+Data used for this project were downloaded from the Origins project website API using the following URL's:  
+1. The published hadar fossil data are available at: `r HADAR_URL`  
+2. A dataset of all skeletal elements from Uberon is also available from Origins at: `r SKELETAL_ELEMENTS_URL`. 
+
+```{r explort to CSV}
+# Write df as csv
+#write.csv(hadar_df,"C:\\Users\\JyhrehJohnson\\iCloudDrive\\Documents\\Documents\\UT\\masters_thesis\\hadar_df.csv", row.names=FALSE) #write the Hadar data as a csv file to save on computer and load into a spreadsheet. 
+
+#write.csv(hadar_api,"C:\\Users\\JyhrehJohnson\\iCloudDrive\\Documents\\Documents\\UT\\masters_thesis\\hadar_api.csv", row.names=FALSE) #write the Hadar api as a csv file to save on computer and load into a spreadsheet.
+```
+
+## Data summary
+```{r}
+# Merge and clean
+#hadar_df1 <- as.data.frame(hadar_df[,-c(1,5,6,8)]) #remove id,side,dental,preserved part from original hadar data frame
+#hadar_api1 <- as.data.frame(hadar_api[,-c(1)]) #remove id from original api data frame
+
+#hadar_merge <- merge(hadar_df1, hadar_api1,by.x = "uberon_id", by.y = "uberon_id", all.x = FALSE,all.y = FALSE) # merge the hadar df and api data frames
+#hadar_merge <- select(hadar_merge,"fossil","name","uberon_id","anatomical_region.y", completeness") #reorder columns
+
+hadar_merge <- merge(hadar_df, hadar_api,by.x = "uberon_id", by.y = "uberon_id", all.x = FALSE, all.y = FALSE) # merge the hadar df and api data frames
+hadar_merge <- select(hadar_merge,"id.x", "fossil", "name", "uberon_id", "anatomical_region.y", "side", "dental", "completeness", "preserved_part") # select and reorder columns
+
+# Convert character columns to factors. There are two ways.
+hadar_merge[,'name']<-as.factor(hadar_merge[,'name'])
+# or
+hadar_merge$anatomical_region.y<-as.factor(hadar_merge$anatomical_region.y)
+hadar_merge$side<-as.factor(hadar_merge$side)
+```
+
+The Hadar fossil data were merged with the Uberon skeletal element data based on the Uberon ID values to produce a dataframe with `r nrow(hadar_merge)` rows and `r ncol(hadar_merge)` columns. The columns include the following attributes: 
+
+```{r}
+data.frame(Variable=names(hadar_merge), Class = sapply(hadar_merge, typeof), Examples = sapply(hadar_merge, function(x) paste0(head(x), collapse = ", ")), row.names = NULL) %>% kable()
+```
+
+
+# Results
+```{r}
+# summarize counts of fossils and elements
+ELEMENT_COUNT<-nrow(hadar_merge) # count how many rows in merged data frame
+FOSSIL_COUNT<-length(levels(as.factor(hadar_merge$fossil))) # count how many unique values in fossil column
+UNIQUE_ELEMENT_COUNT<-length(levels(as.factor(hadar_merge$uberon_id)))
+```
+The data set includes `r ELEMENT_COUNT` elements from `r FOSSIL_COUNT` fossil specimens. There are `r UNIQUE_ELEMENT_COUNT` unique skeletal elements. 
+
+## Most abundant elements
+The most 10 abundant elements are listed in Table 2. 
+```{r table.cap='Table 1. Counts of the 10 most abundant elements'}
+# Calculate number of unique skeletal element types and the abundance of the 10 most common elements.
+element.summary<-summary(hadar_merge$name) # use summary function to generate counts of elements (factor)
+element.summary.df<-data.frame("Element"=names(element.summary), "Count"=unname(element.summary), "Frequency"=(unname(element.summary)/sum(unname(element.summary)))) # convert summary to df
+element.summary.df[1:10,] %>% kable() # convert df to pretty table
+max.man<-c(element.summary["Mandible"], element.summary["Maxilla"])
+btest.max.man<-binom.test(max.man, alternative=c("two.sided"))
+```
+Mandibles are the most abundant element in the Hadar assemblage. They are more than twice as abundant as maxillae (`r element.summary["Mandible"]` vs `r element.summary["Maxilla"] ` respectively) and this difference is significant (exact binomial test, Mandibles = `r max.man[1]`, N = `r sum(max.man)`, p = `r round(btest.max.man$p.value, digits=4)` **).
+
+### Sides
+Do the data indicate any difference in the preservation of left and right sided elements? The data frame includes a column to track element side. This is a factor with five levels: BOTH, L, MID, R, UNK (unknown). 
+```{r table.cap='Table 2'}
+side.table.full<-hadar_merge %>% count(side) # create summary df
+side.table.lr<-side.table.full[side.table.full$side %in% c('L','R'),] # subset df to show just L/R rows
+side.table.lr$proportions <- side.table.lr$n/sum(side.table.lr$n) # Add column with proportion data
+btest.side<-binom.test(side.table.lr$n, alternative="two.sided") # binomial test for probability of 316 lefts out of a total of 604 trials with H0 that p = 0.5
+knitr::kable(side.table.full, label=NA, caption='Table 1. Side counts')
+```
+The number of right and left elements is roughly the same, and not significantly different (exact binomial test, L = `r side.table.lr$n[1]`, N = `r sum(side.table.lr$n)`, p = `r round(btest.side$p.value, digits=4)`, NS)
+
+### Observed vs expected element representation
+
+### Element representation by anatomical region
+```{r counts, fig.cap='Figure 1. Difference between exptected and observed frequencies of elements by region. Block dots indicate the expected proportion of elements based on a human skeleton and the orange dots indicate the observed frequency'}
+# Bivariate Barplot/Expected v. Observed
+# Identify proportions & counts; cranial, dental, axial, appendicular
+skeleton.proportions <- c(22/206, 32/206, 26/206, 126/206) #proportions of regions
+expected_count <- c(165, 98, 80, 385) #expected regional counts, calculations in Google Drive/Sheets under "Analysis"
+hd_count <- c(114, 357, 68, 189) #observed hadar counts
+
+#Bivariate Data
+count_data <- data.frame(expected_count, hd_count) #create data frame with both counts
+regions <- c("cranial", "dental", "axial", "appendicular") #add a regions column
+count_data <- cbind(count_data, regions) #combind the count & regions
+count_data <- select(count_data,"regions", "expected_count", "hd_count") #reorder
+#count_data <- data.frame(t(count_data))
+
+#Graph Dotchart
+dotchart(count_data$hd_count, labels = count_data$regions, bg = "darkorange",
+         pt.cex = 1.5, xlim = range(count_data$expected_count, count_data$hd_count) + c(-2, 2))
+points(count_data$expected_count, 1:nrow(count_data), col = "black", pch = 19, cex = 1.5)
+```
+
+
+```{r}
+#BarStackPlot/For Fragmentation [USE]
+#chisq_plot <- ggbarstats(data = hd_chisq, x = completeness, y = anatomical_region) + labs(caption=NULL) #show the preservation stats for each anatomical region
+#chisq_plot
+
+##Density Plot
+#curve(dchisq(x, df = 4), from = 0, to = 15, main = "Chi-Square Distribution (df = 4)", ylab = 'Density', lwd = 2, col = 'orange')
+```
+
+### Fragmentation analysis
+```{r}
+#Completeness Distrubtion [Use for completeness count]
+comp <- table(hadar_merge$completeness)
+comp_df <- as.data.frame(comp)
+```
+
+### Uberon counts
+```{r}
+#Uberon Count
+uberon_count <- table(hadar_merge$name, hadar_merge$uberon_id)
+uberon_count_df <- as.data.frame(uberon_count)
+uberon_count_df <- uberon_count_df[-1,]
+```
+
+#Element Count
+```{r}
+element <- table(hadar_merge$name, hadar_merge$uberon_id)
+element_df <- as.data.frame(element)
+```
