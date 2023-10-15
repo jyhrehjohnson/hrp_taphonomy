@@ -18,6 +18,7 @@ library(dplyr)
 library(jsonlite)
 library(ggstatsplot)
 library(knitr)
+library(stringr)
 ```
 
 # Materials and Methods
@@ -34,7 +35,7 @@ Data used for this project were downloaded from the Origins project website API 
 1. The published hadar fossil data are available at: `r HADAR_URL`  
 2. A dataset of all skeletal elements from Uberon is also available from Origins at: `r SKELETAL_ELEMENTS_URL`. 
 
-## Data summary
+## Data Summary
 ```{r}
 hadar_merge <- merge(hadar_df, hadar_api,by.x = "uberon_id", by.y = "uberon_id", all.x = FALSE, all.y = FALSE) # merge the hadar df and api data frames
 hadar_merge <- select(hadar_merge,"id.x", "fossil", "name", "uberon_id", "anatomical_region.y", "side", "dental", "completeness", "preserved_part") # select and reorder columns
@@ -62,7 +63,7 @@ UNIQUE_ELEMENT_COUNT<-length(levels(as.factor(hadar_merge$uberon_id)))
 ```
 The data set includes `r ELEMENT_COUNT` elements from `r FOSSIL_COUNT` fossil specimens. There are `r UNIQUE_ELEMENT_COUNT` unique skeletal elements. 
 
-## Most abundant elements
+## Most Abundant Elements
 The most 10 abundant elements are listed in Table 2. 
 ```{r table.cap='Table 1. Counts of the 10 most abundant elements'}
 # Calculate number of unique skeletal element types and the abundance of the 10 most common elements.
@@ -75,7 +76,7 @@ btest.max.man<-binom.test(max.man, alternative=c("two.sided"))
 Mandibles are the most abundant element in the Hadar assemblage. They are more than twice as abundant as maxillae (`r element.summary["Mandible"]` vs `r element.summary["Maxilla"] ` respectively) and this difference is significant (exact binomial test, Mandibles = `r max.man[1]`, N = `r sum(max.man)`, p = `r round(btest.max.man$p.value, digits=4)` **).
 
 ### Sides
-Do the data indicate any difference in the preservation of left and right sided elements? The data frame includes a column to track element side. This is a factor with five levels: BOTH, L, MID, R, UNK (unknown). 
+Does the data indicate any difference in the preservation of left and right sided elements? The data frame includes a column to track element side. This is a factor with five levels: BOTH, L, MID, R, UNK (unknown). 
 ```{r table.cap='Table 2'}
 side.table.full<-hadar_merge %>% count(side) # create summary df
 side.table.lr<-side.table.full[side.table.full$side %in% c('L','R'),] # subset df to show just L/R rows
@@ -85,39 +86,106 @@ knitr::kable(side.table.full, label=NA, caption='Table 1. Side counts')
 ```
 The number of right and left elements is roughly the same, and not significantly different (exact binomial test, L = `r side.table.lr$n[1]`, N = `r sum(side.table.lr$n)`, p = `r round(btest.side$p.value, digits=4)`, NS)
 
-### Observed vs expected element representation
+## Element Representation by Anatomical Region
 
-### Element representation by anatomical region
+### Observed vs Expected Element Representation
+How do the element counts at Hadar compared to the expected counts if there were to be full skeletal preservation?
 ```{r counts, fig.cap='Figure 1. Difference between exptected and observed frequencies of elements by region. Block dots indicate the expected proportion of elements based on a human skeleton and the orange dots indicate the observed frequency'}
 # Bivariate Dotchart/Expected v. Observed
 # Identify proportions & counts; cranial, dental, axial, appendicular
-skeleton.proportions <- c(22/206, 32/206, 26/206, 126/206) #proportions of regions
+skeleton.proportions <- c(22/206, 32/206, 26/206, 126/206) 
 expected_count <- c(77, 113, 91, 445) #expected regional counts, calculations in Google Drive/Sheets under "Analysis"
-hd_count <- c(114, 357, 68, 189) #observed hadar counts
+hadar_count <- c(114, 357, 68, 189) #observed hadar counts
 
 #Bivariate Data
-count_data <- data.frame(expected_count, hd_count) #create data frame with both counts
+count_data <- data.frame(expected_count, hadar_count) #create data frame with both counts
 regions <- c("cranial", "dental", "axial", "appendicular") #add a regions column
 count_data <- cbind(count_data, regions) #combind the count & regions
-count_data <- select(count_data,"regions", "expected_count", "hd_count") #reorder
+count_data <- select(count_data,"regions", "expected_count", "hadar_count") #reorder
 #count_data <- data.frame(t(count_data))
 
 # Graph Dotchart
-dotchart(count_data$hd_count, labels = count_data$regions, bg = "darkorange",
-         pt.cex = 1.5, xlim = range(count_data$expected_count, count_data$hd_count) + c(-2, 2))
+dotchart(count_data$hadar_count, labels = count_data$regions, bg = "darkorange",
+         pt.cex = 1.5, xlim = range(count_data$expected_count, count_data$hadar_count) + c(-2, 2))
 points(count_data$expected_count, 1:nrow(count_data), col = "black", pch = 19, cex = 1.5)
 ```
 
-### Fragmentation analysis
-```{r}
-# Completeness Distribution [Use for completeness count]
-comp <- table(hadar_merge$completeness)
-comp_df <- as.data.frame(comp)
-comp_df
+## Summaries of Expected and Observed Recorded Counts and Proportions
 
-# Fragmentation distribution by anatomical region
-hd_chisq <- hadar_merge[,c("anatomical_region.y", "completeness")]
-chisq_plot <- ggbarstats(data = hd_chisq, x = completeness, y = anatomical_region.y) + labs(caption=NULL) #show the preservation stats for each anatomical region; 729 observations
-chisq_plot 
+```{r}
+# Regional expected 
+regions_expected <- hadar_api%>%group_by(anatomical_region)%>%summarise(count=length(anatomical_region))
+
+regions_expected <- data.frame(regions=regions_expected$anatomical_region, count = regions_expected$count, prop = regions_expected$count/sum(regions_expected$count))
+
+regions_expected$exp_counts <- regions_expected$prop*809
+knitr::kable(regions_expected, label=NA, caption='Table 3. Expected Regional Counts and Proportions') 
+
+exp.counts <- data.frame(regions_expected$exp_counts) #create expected counts df
+
+# Regional observed
+regions_observed <- hadar_merge%>%group_by(anatomical_region.y)%>%summarise(count=length(anatomical_region.y))
+regions_observed <- regions_observed[-6,]
+
+regions_observed <- data.frame(regions=regions_observed$anatomical_region.y, count = regions_observed$count, prop = regions_observed$count/sum(regions_observed$count))
+
+knitr::kable(regions_observed, label=NA, caption='Table 4. Observed Regional Counts and Proportions')
+
+obs.counts <- data.frame(regions_observed$counts) #create expected counts
 ```
 
+## Simuations 
+```{r}
+hadar_sim <- sample_n(hadar_api, 809,replace=TRUE)
+sim.counts <- hadar_sim %>% group_by(anatomical_region) %>% summarise(count=length(anatomical_region)) #create simulated counts
+#sim.counts <- sim.counts$count
+knitr::kable(sim.counts, label=NA, caption='Table 5. Simulated Regional Counts')
+#sim.counts <- sim.counts$count
+#sim.counts[1:5]->sim.counts
+```
+
+### Calculate the Distance and Euclidean Value
+```{r}
+# Calculate Distance
+
+#dist(data.frame(sim.counts, exp.counts)) -> distance
+#euclidean <- function(a,b) sqrt(sum(a-b)^2)
+#a = sim.counts
+#b = exp.counts
+#euclidean(a,b)
+#euclidean(sim.counts, exp.counts)
+
+#Doesn't knit!
+```
+
+```{r}
+#NOTES: Iterate 3 times build up vector of those distance and make histogram plot dis between hadar ones out of all distance how great is my distance
+
+# Multinomial Distribution; Sample from the multinomial 809 elements with replacement 1000 times
+n <- 1000
+probs = c(.28,.09,.16,.45,.001) #props from regions_observed
+simulation <-rmultinom(3, size = 807, prob = probs) 
+  rownames(simulation) <- c("Appendicular", "Axial", "Cranial", "Dental", "Entire")
+  colnames(simulation) <- c("Counts", "Counts", "Counts")
+  head(simulation)
+```
+
+## Element Fragmentation Across Anatomical Region
+
+### Completeness Counts
+The data frame below includes a column to indicate the anatomical region and the number of elements within each region. 
+```{r}
+# Completeness Distribution [Use for completeness count]
+completeness.table.full<-hadar_merge %>% count(completeness) # create summary df
+knitr::kable(completeness.table.full, label=NA, caption='Table 2. Completeness Counts')
+```
+
+### Fragmentation Analysis by anatomical region
+
+What is the percentage distribution of completeness by region? Is their evidence of preservation bias by anatomical region?
+```{r, fragmentation, fig.cap='Figure 2. Completeness Distribution by Region. The green areas represent nearly complete elements, the orange is for elements that are fragmented, and the purple represents complete elements.'}
+# Fragmentation distribution by anatomical region
+hadar_chisq <- hadar_merge[,c("anatomical_region.y", "completeness")]
+hadar_chisq_plot <- ggbarstats(data = hadar_chisq, x = completeness, y = anatomical_region.y) + labs(caption=NULL) #show the preservation stats for each anatomical region; 729 observations
+hadar_chisq_plot 
+```

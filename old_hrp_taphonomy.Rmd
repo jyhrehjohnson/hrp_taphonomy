@@ -83,15 +83,15 @@ points(count_data$expected_count, 1:nrow(count_data), col = "black", pch = 19, c
 #BarStackPlot/For Fragmentation [USE]
 ```{r}
 #UPDATE 
-hd_chisq <- na.omit(hadar_merge[,c("anatomical_region.y", "completeness")]) #gives 729 elements 
-hd_chisq2 <- hadar_merge[,c("anatomical_region.y", "completeness")]
+hadar_chisq <- na.omit(hadar_merge[,c("anatomical_region.y", "completeness")]) #gives 729 elements 
+hadar_chisq2 <- hadar_merge[,c("anatomical_region.y", "completeness")]
 #without na.omit gives 808 elements
 
 sum(is.na(hd_chisq)) #count the number of NAs = 0 NAs /729 elements
 sum(is.na(hd_chisq2)) #count the number of NAs = 80 NAs /728 elements
 #basically the same thing so will get 729 observations like before
 
-chisq_plot <- ggbarstats(data = hd_chisq, x = completeness, y = anatomical_region.y) + labs(caption=NULL) #show the preservation stats for each anatomical region
+chisq_plot <- ggbarstats(data = hadar_chisq, x = completeness, y = anatomical_region.y) + labs(caption=NULL) #show the preservation stats for each anatomical region
 chisq_plot #prints the stacked plots per anatomical region
 ```
 
