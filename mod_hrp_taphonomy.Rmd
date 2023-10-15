@@ -148,26 +148,38 @@ knitr::kable(sim.counts, label=NA, caption='Table 5. Simulated Regional Counts')
 ```{r}
 # Calculate Distance
 
-#dist(data.frame(sim.counts, exp.counts)) -> distance
+dist(data.frame(sim.counts, exp.counts)) #-> distance
 #euclidean <- function(a,b) sqrt(sum(a-b)^2)
 #a = sim.counts
 #b = exp.counts
 #euclidean(a,b)
 #euclidean(sim.counts, exp.counts)
 
-#Doesn't knit!
+#Doesn't knit properly!
 ```
 
+Attempt at running simulation
 ```{r}
 #NOTES: Iterate 3 times build up vector of those distance and make histogram plot dis between hadar ones out of all distance how great is my distance
 
 # Multinomial Distribution; Sample from the multinomial 809 elements with replacement 1000 times
 n <- 1000
+m = 807
 probs = c(.28,.09,.16,.45,.001) #props from regions_observed
 simulation <-rmultinom(3, size = 807, prob = probs) 
   rownames(simulation) <- c("Appendicular", "Axial", "Cranial", "Dental", "Entire")
   colnames(simulation) <- c("Counts", "Counts", "Counts")
   head(simulation)
+  
+simulation.func <- function(m) {
+  simulation <-rmultinom(3, size = m, prob = probs) 
+  rownames(simulation) <- c("Appendicular", "Axial", "Cranial", "Dental", "Entire")
+  colnames(simulation) <- c("Counts", "Counts", "Counts")
+  head(simulation)
+}
+
+#apply () needs an X, MARGIN, and FUN
+#apply(X=regions_observed, MARGIN = 2, FUN = simulation.func)
 ```
 
 ## Element Fragmentation Across Anatomical Region

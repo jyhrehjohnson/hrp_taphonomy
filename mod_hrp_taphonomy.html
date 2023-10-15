@@ -669,34 +669,41 @@ Proportions</h2>
 <tbody>
 <tr class="odd">
 <td align="left">Appendicular</td>
-<td align="right">328</td>
+<td align="right">315</td>
 </tr>
 <tr class="even">
 <td align="left">Axial</td>
-<td align="right">163</td>
+<td align="right">175</td>
 </tr>
 <tr class="odd">
 <td align="left">Cranial</td>
-<td align="right">84</td>
+<td align="right">89</td>
 </tr>
 <tr class="even">
 <td align="left">Dental</td>
-<td align="right">233</td>
+<td align="right">226</td>
 </tr>
 <tr class="odd">
 <td align="left">Entire</td>
-<td align="right">1</td>
+<td align="right">4</td>
 </tr>
 </tbody>
 </table>
 <div id="calculate-the-distance-and-euclidean-value" class="section level3">
 <h3>Calculate the Distance and Euclidean Value</h3>
+<pre><code>## Warning in dist(data.frame(sim.counts, exp.counts)): NAs introduced by coercion</code></pre>
+<pre><code>##          1        2        3        4
+## 2 264.7826                           
+## 3 410.1354 145.8474                  
+## 4 163.9757 100.9184 246.1851         
+## 5 552.2914 288.3234 142.4815 388.4494</code></pre>
+<p>Attempt at running simulation</p>
 <pre><code>##              Counts Counts Counts
-## Appendicular    218    212    220
-## Axial            77     74     55
-## Cranial         140    134    139
-## Dental          371    385    393
-## Entire            1      2      0</code></pre>
+## Appendicular    230    235    244
+## Axial            72     65     76
+## Cranial         131    125    127
+## Dental          374    382    359
+## Entire            0      0      1</code></pre>
 </div>
 </div>
 <div id="element-fragmentation-across-anatomical-region" class="section level2">
