@@ -1,0 +1,265 @@
+---
+title: "HRP Taphonomy"
+author: "Jyhreh Johnson"
+date: "2023-10-05"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE) # Toggle whether to show R code chunks
+```
+
+
+```{r echo = FALSE, include=FALSE}
+# Preliminaries, Load necessary libraries
+library(ggplot2)
+library(tidyverse)
+library(dplyr)
+library(jsonlite)
+library(ggstatsplot)
+library(knitr)
+library(stringr)
+```
+
+# Materials and Methods
+```{r load_hadar_data}
+# Load/Reload Data from Origins using the API
+HADAR_URL <- "https://paleocore.org/origins/api/hadarfossilelements/"
+hadar.raw.df <- as.data.frame(fromJSON(HADAR_URL)) # loads in the Hadar cat_no elements from paleocore. Make sure to save changes in paleocore before running.
+
+# Load Skeletal Element API
+SKELETAL_ELEMENTS_URL<-"https://paleocore.org/origins/api/skeletalelements/"
+skeletal.elements.df <- as.data.frame(fromJSON(SKELETAL_ELEMENTS_URL)) #loads in the skeletal elements from Paleo Core API.
+skeletal.elements.df$anatomical_region<-as.factor(skeletal.elements.df$anatomical_region)
+skeletal.elements.df$name<-as.factor(skeletal.elements.df$name)
+skeletal.elements.df$uberon_id<-as.factor(skeletal.elements.df$uberon_id)
+```
+
+Data used for this project were downloaded from the Origins project website API using the following URL's:  
+1. The published hadar fossil data are available at: `r HADAR_URL`  
+2. A dataset of all skeletal elements from Uberon is also available from Origins at: `r SKELETAL_ELEMENTS_URL`. 
+
+## Data Summary
+```{r}
+#hadar_merge <- merge(hadar_df, hadar_api,by.x = "uberon_id", by.y = "uberon_id", all.x = FALSE, all.y = FALSE) # merge the hadar df and api data frames
+#hadar_merge <- select(hadar_merge,"id.x", "fossil", "name", "uberon_id", "anatomical_region.y", "side", "dental", "completeness", "preserved_part") # select and reorder columns
+
+# Merge and clean the data frames.
+hadar.df <- merge(hadar.raw.df, skeletal.elements.df,by.x = "uberon_id", by.y = "uberon_id", all.x = FALSE, all.y = FALSE) # merge the skeletal elements df to the hadar df.
+
+hadar.df <- data.frame(id=hadar.df$id.x, cat_no=hadar.df$fossil, skeletal_element=hadar.df$name, uberon_id=hadar.df$uberon_id, anatomical_region=hadar.df$anatomical_region.y, side=hadar.df$side, dental=hadar.df$dental, completeness=hadar.df$completeness, hadar.df$preserved_part)
+
+# Convert character columns to factors. There are two ways.
+hadar.df[,'skeletal_element']<-as.factor(hadar.df[,'skeletal_element'])
+# or
+hadar.df$anatomical_region<-as.factor(hadar.df$anatomical_region)
+hadar.df$side<-as.factor(hadar.df$side)
+```
+The Hadar cat_no data were merged with the Uberon skeletal element data based on the Uberon ID values to produce a dataframe with `r nrow(hadar.df)` rows and `r ncol(hadar.df)` columns. The columns include the following attributes: 
+
+```{r}
+# Generate a table that summarizes each column/field in hadar.df
+data.frame(Variable=names(hadar.df), Class = sapply(hadar.df, typeof), Examples = sapply(hadar.df, function(x) paste0(unique(x)[1:5], collapse = ", ")), row.names = NULL) %>% kable(caption="Table 1. Data structure summary.")
+```
+* The **id** field is an internally unique identifier for every cat_no specimen. Individual specimens may in turn be comprised of multiple skeletal elements. For example a preserved mandible may include the dentary, and several molars. Hence the total number of skeletal elements in the dataset is larger than the total number of specimens.
+* The **cat_no** column records the catalog number of the individual cat_nos. The values in this column are also unique for every specimen but not uniuqe for every skeletal element.
+* The **skeletal_element** column indicates the name of the preserved skeletal element.
+* The **uberon_id** column represents the unique identifier assigned to each skeletal_element. It is used as a foreign key to the uberon anatomy ontology.
+* The **anatomical_region** column is a factor encoding the general part or region of the body where the anatomical element indicated by the Uberon ID is located.
+* The **side** column tracks the anatomical side of the element (if it is bilateral) or its midline position otherwise. This column uses a structured vocabulary of: R (right), L (left), MID (midline), BOTH (both sides), UNK (unknown)
+* The **dental** column is a boolean indicating if the skeletal element is or is not part of the dentition
+* The **completeness** column indicates the degree of element completeness of the specimen. It uses a structured vocabulary of: complete, nearly complete, fragment.
+* The **preserved_part** column is used for incomplete specimens to indicate what part is preserved.
+
+# Results
+```{r}
+# Summarize counts of cat_nos and elements
+ELEMENT_COUNT<-nrow(hadar.df) # count how many rows in hadar.df data frame
+FOSSIL_COUNT<-length(levels(as.factor(hadar.df$cat_no))) # count how many unique values in cat_no column
+UNIQUE_ELEMENT_COUNT<-length(levels(as.factor(hadar.df$uberon_id))) # count how many unique uberon_ids appear in the uberon_id column of the hadar data frame
+```
+The data set includes `r ELEMENT_COUNT` elements from `r FOSSIL_COUNT` cat_no specimens. There are `r UNIQUE_ELEMENT_COUNT` unique skeletal elements in the hadar dataset. 
+
+## Most Abundant Elements
+The most 10 abundant elements are listed in Table 2. 
+```{r table.cap='Table 1. Counts of the 10 most abundant elements'}
+# Calculate number of unique skeletal element types in the hadar data frame, and the abundance of the 10 most common elements.
+element.summary<-summary(hadar.df$skeletal_element) # use summary function to generate counts of elements (factor)
+element.summary.df<-data.frame("Element"=names(element.summary), "Count"=unname(element.summary), "Frequency"=(unname(element.summary)/sum(unname(element.summary)))) # convert summary to df
+element.summary.df[1:10,] %>% kable(caption='Table 2. Counts of the 10 most abundant elements') # convert df to pretty table
+max.man<-c(element.summary["Mandible"], element.summary["Maxilla"])
+btest.max.man<-binom.test(max.man, alternative=c("two.sided"))
+```
+Mandibles are the most abundant element in the Hadar assemblage. They are more than twice as abundant as maxillae (`r element.summary["Mandible"]` vs `r element.summary["Maxilla"] ` respectively) and this difference is significant (exact binomial test, Mandibles = `r max.man[1]`, N = `r sum(max.man)`, p = `r round(btest.max.man$p.value, digits=4)` **).
+
+## Elements present and missing from Hadar
+```{r}
+# Are there any elements in the skeletal_elements.df that are not present in the hadar.df? Are there any anatomical elements not recovered at hadar?
+skeletal.elements.set <- levels(skeletal.elements.df$uberon_id)
+hadar.elements.set <- levels(hadar.df$uberon_id)
+SKELETAL_ELEMENT_COUNT <- length(skeletal.elements.set) # The count of the number of unique uberon_id values in the skeletal element data frame
+not.at.hadar <- setdiff(skeletal.elements.set, hadar.elements.set)
+```
+In total there are `r SKELETAL_ELEMENT_COUNT` unique skeletal elements identified as part of a human skeleton. At Hadar, `r UNIQUE_ELEMENT_COUNT` elements are present, indicating that 129 specific elements do not appear at Hadar.
+
+### Sides
+Does the data indicate any difference in the preservation of left and right sided elements? The data frame includes a column to track element side. This is a factor with five levels: BOTH, L, MID, R, UNK (unknown). 
+```{r table.cap='Table 3'}
+side.table.full<-hadar.df %>% count(side) # create summary df
+side.table.lr<-side.table.full[side.table.full$side %in% c('L','R'),] # subset df to show just L/R rows
+side.table.lr$proportions <- side.table.lr$n/sum(side.table.lr$n) # Add column with proportion data
+btest.side<-binom.test(side.table.lr$n, alternative="two.sided") # binomial test for probability of 316 lefts out of a total of 604 trials with H0 that p = 0.5
+knitr::kable(side.table.full, label=NA, caption='Table 3. Side counts')
+```
+The number of right and left elements is roughly the same, and not significantly different (exact binomial test, L = `r side.table.lr$n[1]`, N = `r sum(side.table.lr$n)`, p = `r round(btest.side$p.value, digits=4)`, NS)
+
+## Element Representation by Anatomical Region
+
+### Observed vs Expected Element Representation
+How do the element counts at Hadar compared to the expected counts if there were to be full skeletal preservation?
+```{r counts, fig.cap='Figure 1. Difference between exptected and observed frequencies of elements by region. Block dots indicate the expected proportion of elements based on a human skeleton and the orange dots indicate the observed frequency'}
+
+# First calculate the expected counts by anatomical region for sample that matches the element count of hadar.df
+euclidean<-function(a,b) sqrt(sum((a-b)^2)) # A quick function to calculate the euclidean distance between two vectors
+skeletal.elements.summary<-skeletal.elements.df %>% group_by(anatomical_region) %>% summarise(count=length(anatomical_region))
+names(skeletal.elements.summary) <- c('region', 'count')
+skeletal.elements.summary$prop <- skeletal.elements.summary$count/sum(skeletal.elements.summary$count)
+skeletal.elements.summary$exp_count <- skeletal.elements.summary$prop * nrow(hadar.df)
+
+# Calculate the observed counts at Hadar
+hadar.elements.summary<-hadar.df %>% group_by(anatomical_region) %>% summarise(count=length(anatomical_region), .drop=FALSE)
+
+# A function to resample the skeletal elements dataset with a sample size equal to the hadar dataset.
+resample.skeletal.elements.df <- function(x=skeletal.elements.df, n=nrow(hadar.df)) { # Function takes two arguments, the skeletal.elements.df and the length of the hadar.df
+  # skeletal.elements.resample <- sample_n(x, s, replace=TRUE) # Randomly sample rows from skeletal.elements.df with replacement, which is necessary since we are sampling more rows than are present in the df.
+  skeletal.elements.resample <- skeletal.elements.df %>% slice_sample(n=n, replace=TRUE) # Randomly sample rows from skeletal.elements.df with replacement. The slice_sample function replaces, sample_n and sample_frac.
+  skeletal.elements.resample.summary <- skeletal.elements.resample %>% group_by(anatomical_region, .drop=FALSE) %>% summarise(count=length(anatomical_region)) # Generate summary of resampled rows.
+  return(skeletal.elements.resample.summary) # Return the summary table
+}
+
+get.simulated.distance <- function(x) euclidean(skeletal.elements.summary$exp_count, resample.skeletal.elements.df()$count)
+
+simulate <- function(nreps=100) {
+  distances <- c()
+  for (rep in 1:nreps){
+    distances <- c(distances, get.simulated.distance())
+  }
+  return(distances)
+}
+```
+
+```{r fig.cap="Figure 1. Dotchart depicting the relationship between observed and expected skeletal elements. Black dots indicate the expected proportion of elements based on a human skeleton and the orange dots indicate the observed frequency."}
+# Identify proportions & counts; cranial, dental, axial, appendicular
+skeleton.proportions <- c(22/206, 32/206, 26/206, 126/206) #proportions of regions
+expected_count <- c(77, 113, 91, 445) #expected regional counts, calculations in Google Drive/Sheets under "Analysis"
+hd_count <- c(114, 357, 68, 189) #observed hadar counts
+
+#Bivariate Data
+count_data <- data.frame(expected_count, hd_count) #create data frame with both counts
+regions <- c("cranial", "dental", "axial", "appendicular") #add a regions column
+count_data <- cbind(count_data, regions) #combind the count & regions
+count_data <- select(count_data,"regions", "expected_count", "hd_count") #reorder
+
+#Graph Dotchart
+dotchart(count_data$hd_count, labels = count_data$regions, bg = "darkorange",
+         pt.cex = 1.5, xlim = range(count_data$expected_count, count_data$hd_count) + c(-2, 2))
+points(count_data$expected_count, 1:nrow(count_data), col = "black", pch = 19, cex = 1.5)
+```
+
+
+## Summaries of Expected and Observed Recorded Counts and Proportions
+```{r}
+# Regional expected 
+regions_expected <- skeletal.elements.df%>%group_by(anatomical_region)%>%summarise(count=length(anatomical_region))
+regions_expected <- data.frame(regions=regions_expected$anatomical_region, count = regions_expected$count, prop = regions_expected$count/sum(regions_expected$count))
+regions_expected$exp_counts <- regions_expected$prop*807
+knitr::kable(regions_expected, label=NA, caption='Table 2. Expected Regional Counts and Proportions') 
+#exp.counts <- data.frame(regions_expected$exp_counts) #create expected counts df
+
+# Regional observed
+regions_observed <- hadar.df%>%group_by(anatomical_region)%>%summarise(count=length(anatomical_region))
+regions_observed <- regions_observed[-6,]
+regions_observed <- data.frame(regions=regions_observed$anatomical_region, count = regions_observed$count, prop = regions_observed$count/sum(regions_observed$count))
+knitr::kable(regions_observed, label=NA, caption='Table 3. Observed Regional Counts and Proportions')
+#obs.counts <- data.frame(regions_observed$count) #create observed counts
+```
+
+```{r histogram, fig.cap="Figure 2. Histogram of distance measurements between simulated and observed counts of skeletal element regions"}
+s10k<-simulate(10000)
+hist(s10k)
+observed.distance <- euclidean(skeletal.elements.summary$exp_count, hadar.elements.summary$count)
+```
+The histogram shows the frequency distribution of distances for 10,000 simulated samples drawn from the skeletal elements dataset of size equal to the number of rows in the hadar dataset (n = `r nrow(hadar.df)`). Each simulation replications a random sampling of 809 skeletal elements where each sample is drawn form a complete skeleton, with replacement. The counts of elements by anatomical region in each simulated run are then generated and compared to the expected counts by anatomical region as they occur in the skeletal elements dataset. A euclidean distance is calculated. This histogram shows the frequency of distance across all 10,000 simulated runs. The maximum simulated distance observed in 10,000 runs was `r max(s10k)` whereas the observed euclidean distance between the anatomical regions in the hadar data set compared with the skeletal element represented in a human skeleton was `r observed.distance`, indicating the probability of obtaining the distribution of anatomical regions by randomly sampling from a complete human skeleton is much less than p = 0.0001 (i.e. 1 in 10,000)
+
+
+## Element Fragmentation Across Anatomical Region
+
+### Completeness Counts
+The data frame below includes a column to indicate the anatomical region and the number of elements within each region. 
+```{r}
+# Completeness Distribution [Use for completeness count]
+completeness.table.full<-hadar.df %>% count(completeness) # create summary df
+knitr::kable(completeness.table.full, label=NA, caption='Table 4. Completeness Counts')
+```
+
+### Fragmentation Analysis by anatomical region
+
+What is the percentage distribution of completeness by region? Is their evidence of preservation bias by anatomical region?
+```{r, fragmentation, fig.cap='Figure 3. Completeness Distribution by Region. The green areas represent nearly complete elements, the orange is for elements that are fragmented, and the purple represents complete elements.'}
+# Fragmentation distribution by anatomical region
+hadar_chisq <- hadar.df[,c("anatomical_region", "completeness")]
+hadar_chisq_plot <- ggbarstats(data = hadar_chisq, x = completeness, y = anatomical_region) + labs(caption=NULL) #show the preservation stats for each anatomical region; 729 observations
+hadar_chisq_plot 
+```
+
+
+
+
+
+
+
+```{r}
+#hadar_sim <- sample_n(hadar_api, 807,replace=TRUE)
+#sim.counts <- hadar_sim %>% group_by(anatomical_region) %>% summarise(count=length(anatomical_region)) #create simulated counts
+#sim.counts <- sim.counts$count
+#knitr::kable(sim.counts, label=NA, caption='Table 5. Simulated Regional Counts')
+#sim.counts <- sim.counts$count
+#sim.counts[1:5]->sim.counts
+```
+
+```{r}
+# Calculate Distance
+
+#dist(data.frame(sim.counts, exp.counts)) -> distance
+#euclidean <- function(a,b) sqrt(sum(a-b)^2)
+#a = sim.counts
+#b = exp.counts
+#euclidean(a,b)
+#euclidean(sim.counts, exp.counts)
+
+#Doesn't knit properly!
+```
+
+```{r}
+#NOTES: Iterate 3 times build up vector of those distance and make histogram plot dis between hadar ones out of all distance how great is my distance
+
+# Multinomial Distribution; Sample from the multinomial 809 elements with replacement 1000 times
+#n <- 1000
+#s = 807
+#probs = c(.28,.09,.16,.45,.001) #props from regions_observed
+#simulation <-rmultinom(3, size = 807, prob = probs) 
+  #rownames(simulation) <- c("Appendicular", "Axial", "Cranial", "Dental", "Entire")
+  #colnames(simulation) <- c("Counts", "Counts", "Counts")
+  #head(simulation)
+
+#simulation.func <- function(s) {
+ # simulation <-rmultinom(3, size = s, prob = probs) 
+  #rownames(simulation) <- c("Appendicular", "Axial", "Cranial", "Dental", "Entire")
+  #colnames(simulation) <- c("Counts", "Counts", "Counts")
+  #head(simulation)
+#}
+#simulation.func(s)
+#apply () needs an X, MARGIN, and FUN
+#sim <- sapply(X=s, FUN = simulation.func, na.rm = TRUE)
+```
+
