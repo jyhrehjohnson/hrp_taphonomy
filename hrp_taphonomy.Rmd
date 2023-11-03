@@ -89,6 +89,7 @@ element.summary.df<-data.frame("Element"=names(element.summary), "Count"=unname(
 element.summary.df[1:10,] %>% kable(caption='Table 2. Counts of the 10 most abundant elements') # convert df to pretty table
 max.man<-c(element.summary["Mandible"], element.summary["Maxilla"])
 btest.max.man<-binom.test(max.man, alternative=c("two.sided"))
+print(btest.max.man)
 ```
 Mandibles are the most abundant element in the Hadar assemblage. They are more than twice as abundant as maxillae (`r element.summary["Mandible"]` vs `r element.summary["Maxilla"] ` respectively) and this difference is significant (exact binomial test, Mandibles = `r max.man[1]`, N = `r sum(max.man)`, p = `r round(btest.max.man$p.value, digits=4)` **).
 
