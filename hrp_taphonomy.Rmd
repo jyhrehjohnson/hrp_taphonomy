@@ -52,8 +52,8 @@ hadar.df <- data.frame(id=hadar.df$id.x, cat_no=hadar.df$fossil, skeletal_elemen
 # Convert character columns to factors. There are two ways.
 hadar.df[,'skeletal_element']<-as.factor(hadar.df[,'skeletal_element'])
 # or
-hadar.df$anatomical_region<-as.factor(hadar.df$anatomical_region)
-hadar.df$side<-as.factor(hadar.df$side)
+#hadar.df$anatomical_region<-as.factor(hadar.df$anatomical_region)
+#hadar.df$side<-as.factor(hadar.df$side)
 ```
 The Hadar cat_no data were merged with the Uberon skeletal element data based on the Uberon ID values to produce a dataframe with `r nrow(hadar.df)` rows and `r ncol(hadar.df)` columns. The columns include the following attributes: 
 
@@ -110,6 +110,7 @@ side.table.full<-hadar.df %>% count(side) # create summary df
 side.table.lr<-side.table.full[side.table.full$side %in% c('L','R'),] # subset df to show just L/R rows
 side.table.lr$proportions <- side.table.lr$n/sum(side.table.lr$n) # Add column with proportion data
 btest.side<-binom.test(side.table.lr$n, alternative="two.sided") # binomial test for probability of 316 lefts out of a total of 604 trials with H0 that p = 0.5
+print(btest.side)
 knitr::kable(side.table.full, label=NA, caption='Table 3. Side counts')
 ```
 The number of right and left elements is roughly the same, and not significantly different (exact binomial test, L = `r side.table.lr$n[1]`, N = `r sum(side.table.lr$n)`, p = `r round(btest.side$p.value, digits=4)`, NS)
@@ -118,8 +119,7 @@ The number of right and left elements is roughly the same, and not significantly
 
 ### Observed vs Expected Element Representation
 How do the element counts at Hadar compared to the expected counts if there were to be full skeletal preservation?
-```{r counts, fig.cap='Figure 1. Difference between exptected and observed frequencies of elements by region. Block dots indicate the expected proportion of elements based on a human skeleton and the orange dots indicate the observed frequency'}
-
+```{r}
 # First calculate the expected counts by anatomical region for sample that matches the element count of hadar.df
 euclidean<-function(a,b) sqrt(sum((a-b)^2)) # A quick function to calculate the euclidean distance between two vectors
 skeletal.elements.summary<-skeletal.elements.df %>% group_by(anatomical_region) %>% summarise(count=length(anatomical_region))
@@ -149,16 +149,34 @@ simulate <- function(nreps=100) {
 }
 ```
 
+### Summaries of Expected and Observed Recorded Counts and Proportions
+```{r}
+# Regional expectations
+regions_expected <- skeletal.elements.df%>%group_by(anatomical_region)%>%summarise(count=length(anatomical_region))
+regions_expected <- data.frame(regions=regions_expected$anatomical_region, count = regions_expected$count, prop = regions_expected$count/sum(regions_expected$count))
+regions_expected$exp_counts <- regions_expected$prop*807
+knitr::kable(regions_expected, label=NA, caption='Table 2. Expected Regional Counts and Proportions') 
+#exp.counts <- data.frame(regions_expected$exp_counts) #create expected counts df
+
+# Regional observations
+regions_observed <- hadar.df%>%group_by(anatomical_region)%>%summarise(count=length(anatomical_region))
+regions_observed <- regions_observed[-6,]
+regions_observed <- data.frame(regions=regions_observed$anatomical_region, count = regions_observed$count, prop = regions_observed$count/sum(regions_observed$count))
+knitr::kable(regions_observed, label=NA, caption='Table 3. Observed Regional Counts and Proportions')
+#obs.counts <- data.frame(regions_observed$count) #create observed counts
+```
+
 ```{r fig.cap="Figure 1. Dotchart depicting the relationship between observed and expected skeletal elements. Black dots indicate the expected proportion of elements based on a human skeleton and the orange dots indicate the observed frequency."}
 # Identify proportions & counts; cranial, dental, axial, appendicular
 skeleton.proportions <- c(22/206, 32/206, 26/206, 126/206) #proportions of regions
-expected_count <- c(77, 113, 91, 445) #expected regional counts, calculations in Google Drive/Sheets under "Analysis"
-hd_count <- c(114, 357, 68, 189) #observed hadar counts
+
+expected_count <- c(28, 78, 56, 112) #calculated expected counts; old (77, 113, 91, 445) calculations in Google Drive/Sheets under "Analysis"
+hd_count <- c(137, 364, 76, 229) #observed hadar counts; old(114, 357, 68, 189)
 
 #Bivariate Data
 count_data <- data.frame(expected_count, hd_count) #create data frame with both counts
 regions <- c("cranial", "dental", "axial", "appendicular") #add a regions column
-count_data <- cbind(count_data, regions) #combind the count & regions
+count_data <- cbind(count_data, regions) #combine the count & regions
 count_data <- select(count_data,"regions", "expected_count", "hd_count") #reorder
 
 #Graph Dotchart
@@ -168,29 +186,12 @@ points(count_data$expected_count, 1:nrow(count_data), col = "black", pch = 19, c
 ```
 
 
-## Summaries of Expected and Observed Recorded Counts and Proportions
-```{r}
-# Regional expected 
-regions_expected <- skeletal.elements.df%>%group_by(anatomical_region)%>%summarise(count=length(anatomical_region))
-regions_expected <- data.frame(regions=regions_expected$anatomical_region, count = regions_expected$count, prop = regions_expected$count/sum(regions_expected$count))
-regions_expected$exp_counts <- regions_expected$prop*807
-knitr::kable(regions_expected, label=NA, caption='Table 2. Expected Regional Counts and Proportions') 
-#exp.counts <- data.frame(regions_expected$exp_counts) #create expected counts df
-
-# Regional observed
-regions_observed <- hadar.df%>%group_by(anatomical_region)%>%summarise(count=length(anatomical_region))
-regions_observed <- regions_observed[-6,]
-regions_observed <- data.frame(regions=regions_observed$anatomical_region, count = regions_observed$count, prop = regions_observed$count/sum(regions_observed$count))
-knitr::kable(regions_observed, label=NA, caption='Table 3. Observed Regional Counts and Proportions')
-#obs.counts <- data.frame(regions_observed$count) #create observed counts
-```
-
 ```{r histogram, fig.cap="Figure 2. Histogram of distance measurements between simulated and observed counts of skeletal element regions"}
 s10k<-simulate(10000)
 hist(s10k)
 observed.distance <- euclidean(skeletal.elements.summary$exp_count, hadar.elements.summary$count)
 ```
-The histogram shows the frequency distribution of distances for 10,000 simulated samples drawn from the skeletal elements dataset of size equal to the number of rows in the hadar dataset (n = `r nrow(hadar.df)`). Each simulation replications a random sampling of 807 skeletal elements where each sample is drawn form a complete skeleton, with replacement. The counts of elements by anatomical region in each simulated run are then generated and compared to the expected counts by anatomical region as they occur in the skeletal elements dataset. A euclidean distance is calculated. This histogram shows the frequency of distance across all 10,000 simulated runs. The maximum simulated distance observed in 10,000 runs was `r max(s10k)` whereas the observed euclidean distance between the anatomical regions in the hadar data set compared with the skeletal element represented in a human skeleton was `r observed.distance`, indicating the probability of obtaining the distribution of anatomical regions by randomly sampling from a complete human skeleton is much less than p = 0.0001 (i.e. 1 in 10,000)
+The histogram shows the frequency distribution of distances for 10,000 simulated samples drawn from the skeletal elements dataset of size equal to the number of rows in the hadar dataset (n = `r nrow(hadar.df)`). Each simulation replicates a random sampling of 807 skeletal elements where each sample is drawn from a complete skeleton, with replacement. The counts of elements by anatomical region in each simulated run are then generated and compared to the expected counts by anatomical region as they occur in the skeletal elements dataset. A euclidean distance is calculated. This histogram shows the frequency of distance across all 10,000 simulated runs. The maximum simulated distance observed in 10,000 runs was `r max(s10k)` whereas the observed euclidean distance between the anatomical regions in the hadar data set compared with the skeletal element represented in a human skeleton was `r observed.distance`, indicating the probability of obtaining the distribution of anatomical regions by randomly sampling from a complete human skeleton is much less than p = 0.0001 (i.e. 1 in 10,000)
 
 
 ## Element Fragmentation Across Anatomical Region
@@ -214,6 +215,14 @@ hadar_chisq_plot
 ```
 A fragmentation analysis was conducted to examine the preservation percentages by anatomical region. Of the 807 skeletal elements, 729 were used in the analysis due to lack of information (i.e. element name, anatomical region, completeness). The dental region recorded the highest percentage of complete elements yielding 86% and the lowest in the axial with 12%. This could possibly be due to how the teeth were preserved as many are still embedded within the corresponding maxilla or mandible, but it could also be attributed to their compact and dense structure. 
 
+## Element Count
+
+What are the overall counts for each element within the Hadar assemblage? 
+```{r}
+element <- hadar.df %>% count(skeletal_element,uberon_id)
+element
+write.csv(element,"element.csv", row.names=FALSE)
+```
 
 
 
