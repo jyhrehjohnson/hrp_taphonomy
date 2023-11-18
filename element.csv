@@ -24,6 +24,7 @@
 "Humerus","UBERON:0000976",13
 "Humerus diaphysis","UBERON:0004652",5
 "Incisor tooth","UBERON:0001098",3
+"innominate","UBERON:0001272",1
 "Intermediate Hand Phalanx","UBERON:0003864",16
 "Intermediate Phalanx","UBERON:0004301",2
 "Ischium","UBERON:0001274",1
@@ -83,7 +84,6 @@
 "Navicular","UBERON:0001451",2
 "Occipital bone","UBERON:0001676",10
 "Parietal bone","UBERON:0000210",7
-"Pelvis","UBERON:0001272",1
 "Phalanx","UBERON:0003221",1
 "Pisiform","UBERON:0001429",1
 "Premolar tooth","UBERON:0007120",8

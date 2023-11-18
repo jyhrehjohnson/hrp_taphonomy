@@ -170,7 +170,7 @@ knitr::kable(regions_observed, label=NA, caption='Table 3. Observed Regional Cou
 # Identify proportions & counts; cranial, dental, axial, appendicular
 skeleton.proportions <- c(22/206, 32/206, 26/206, 126/206) #proportions of regions
 
-expected_count <- c(28, 78, 56, 112) #calculated expected counts; old (77, 113, 91, 445) calculations in Google Drive/Sheets under "Analysis"
+expected_count <- c(81, 228, 163, 330) #calculated expected counts; old (77, 113, 91, 445) calculations in Google Drive/Sheets under "Analysis"
 hd_count <- c(137, 364, 76, 229) #observed hadar counts; old(114, 357, 68, 189)
 
 #Bivariate Data
